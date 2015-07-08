@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <link rel="stylesheet" href="calculator.css">
+    </head>
+    <body>
+        <div class="make-blue">
+            <input placeholder="number 1" id="num1"/>
+            <input placeholder="number 2" id="num2"/>
+            <button id='Adbtn'>Add</button>
+        </div>
+        <br/>
+        <div class="special-color">
+            <input placeholder="number 1" id="num3"/>
+            <input placeholder="number 2" id="num4"/>
+            <button id='mul-btn'>Multiply</button>
+        </div>
+        <br/>
+        <div class="brown-color">
+            <input placeholder="number 1" id="num5"/>
+            <input placeholder="number 2" id="num6"/>
+            <button id='sub-btn'>Subtract</button>
+        </div>
+        <br/>
+        <div >
+            <p id='result'></result>
+        </div>
+       <br/>
+        <div >
+            <p id='mul-result'></result>
+        </div>
+        <br/>
+        <div >
+            <p id='sub-result'></result>
+        </div>
+          <script type="text/javascript">
+          document.getElementById('Adbtn').addEventListener('click',function(){
+             var number1 = parseInt(document.getElementById("num1").value);
+             var number2 = parseInt(document.getElementById("num2").value);
+             var addition = number1 + number2; 
+             document.getElementById('result').innerHTML=addition.toString();
+         });
+      </script>
+      <script type="text/javascript">
+          document.getElementById('mul-btn').addEventListener('click',function(){
+             var number3 = parseInt(document.getElementById("num3").value);
+             var number4 = parseInt(document.getElementById("num4").value);
+             var multiplication = number3 * number4; 
+             document.getElementById('mul-result').innerHTML=multiplication.toString();
+          });
+      </script>
+          <script type="text/javascript">
+          document.getElementById('sub-btn').addEventListener('click',function(){
+             var number5 = parseInt(document.getElementById("num5").value);
+             var number6 = parseInt(document.getElementById("num6").value);
+             var subtraction = number5 - number6; 
+             document.getElementById('sub-result').innerHTML=subtraction.toString();
+         });
+      </script>
+    </body>
+</html>
