@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Mario Pest Control</title>
+        <link rel='stylesheet' href="mario.css">
+    </head>
+    <body>
+        <h1>Mario Pest Control</h1>     
+        <hr>
+        <table width="600px">
+            
+            <tr>
+              <th>Baddie</th>
+              <th>Name</th>		
+              <th>Number Caught</th>
+              <th>Price</th>
+            </tr>
+            <tr>
+              <td><img src="Goomba_SMB.png"/></td>
+              <td>Goomba</td>		
+              <td>12</td>
+              <td id='goombaprice'></td>
+            </tr>
+            <tr>
+                <td><img src='Bob-omb.png'/></td>
+                <td>Bob-omb</td>
+                <td>8</td>
+                <td id='bombprice'></td>
+            </tr>
+            <tr>
+                <td><img src='cheep-cheeps.png'/></td>
+                <td>Cheep-cheeps</td>
+                <td>5</td>
+                <td id='cheepsprice'></td>
+            </tr>
+            <tr>
+                <td>Total Price:</td>
+                <td></td>
+                <td></td>
+                <td id='totalprice'></td>
+            </tr>
+            
+        </table>
+  
+        <script type="text/javascript">
+            var a= document.getElementById('goombaprice').innerHTML = 12*5;
+            var b = document.getElementById('bombprice').innerHTML = 7*8;
+            var c = document.getElementById('cheepsprice').innerHTML = 5*11;
+            document.getElementById('totalprice').innerHTML=a+b+c;
+        </script>
+        
+        <hr>
+        <footer>
+            <p>Email: mario@pestcontrol.com</p>
+            <p>Visit us at: www.mariopestcontrol.com</p>
+            <p>Address: 123 Main Street, Marioville, CA,12345</p>
+        </footer>
+    </body>
+</html>
