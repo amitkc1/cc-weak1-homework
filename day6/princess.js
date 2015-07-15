@@ -40,7 +40,7 @@ var randomRange =
 var randomResult = randomRange(0,2);
 
 if(randomResult===0){
- princess.gotHit();
+ princess.gotHit("Big");
  princess.print();
 }
 
