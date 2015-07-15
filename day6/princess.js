@@ -24,10 +24,10 @@ var princess={
         this.totalCoins +=coins;
     },
     print:function(){
-        console.log(this.name+'\n');
-        console.log(this.totalCoins+'\n');
-        console.log(this.status+'\n');
-        console.log(this.star+'\n');
+        console.log("Name: "+this.name+'\n');
+        console.log("Coins: "+this.totalCoins+'\n');
+        console.log("Status: "+this.status+'\n');
+        console.log("Star: "+this.star+'\n');
     }
 };
 
