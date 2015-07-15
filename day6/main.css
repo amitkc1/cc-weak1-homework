@@ -1,0 +1,88 @@
+@font-face {
+  font-family: 'Super Mario 256';
+  src: url('SuperMario256.ttf');
+}
+	
+
+#boxTitle{
+    font-family: 'Super Mario 256';
+    font-weight: bold;
+    color:red;
+    float:none;
+    display:inline-block;
+    margin-left: 40px;
+    font-size: 4em;
+}
+
+#redBox{
+    background-color:red;
+
+}
+
+#luigiImage{
+    height:230px;
+    margin: 0 auto;
+    
+}
+
+#mushroomImage{
+    height:50px;
+    vertical-align: middle;
+    display: inline-block;
+    float:right;
+}
+p{
+    font-weight: bolder;
+    margin:0;
+    color:red;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+#about{
+     font-family: 'Super Mario 256';
+    font-weight: bold;
+    color:red;
+    text-align: center;
+    font-size: 4em;
+}
+
+@media screen and (max-width: 480px) {
+    #boxTitle{
+        font-family: 'Super Mario 256';
+        font-weight: bold;
+        color:red;
+        float:none;
+        display:inline-block;
+        margin-left: 20px;
+        font-size: 2em;
+   }
+    
+    #luigiImage{
+        height:80px;
+        margin: 0 auto;
+   }
+    #redBox{
+        height:100px;
+    
+    }
+    #whiteBox{
+        height:100px;
+    }
+    
+    #about{
+     font-family: 'Super Mario 256';
+    font-weight: bold;
+    color:red;
+    text-align: center;
+    font-size: 2em;
+    }
+    
+    p{
+        font-weight: bolder;
+        margin:0;
+        color:red;
+        font-size: 0.8em;
+        text-align: center;
+    }
+}
