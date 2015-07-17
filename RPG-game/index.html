@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    
+</head>
+
+<body>
+    <div id="wrapper">
+        <div class="container well" id="chooseSection">
+            <div class="row" style="text-align:center">
+                <div class="col-md-8 col-md-offset-2">
+                    <h1>Choose Your Character</h1>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="well" id="aldrenElem">
+                                <img src="img/aldren.png" style="max-width:200px">
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="well" id="badukElem">
+                                <img src="img/Baduk.png" style="max-width:200px">
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="well" id="connellElem">
+                                <img src="img/connell.png" style="max-width:200px">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 col-md-offset-3">
+                            <input class="form-control" id="playerNameInput" placeholder="Enter player's name">
+                        </div>
+                    </div>
+                    <div class="row" style="padding-top:30px">
+                        <div class="col-md-6 col-md-offset-3">
+                            <button class="btn btn-success" id="startGameBtn" style="width:100%">
+                            Start Game
+                            </button>
+                        </div>
+                    </div>
+                    
+                </div>
+
+            </div>
+
+        </div>
+        
+        <div class="container well" id="battleSection">
+            <div class="row" style="text-align:center">
+                <div class="col-md-8 col-md-offset-2">
+                    <h2 id="battleStatus">Waiting for you to attack...</h2>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h3 id="marioHP">15 HP</h3>
+                            <div id="marioBattleElem">
+                                <img src="img/mario.png" style="max-width:200px;z-index:1;position:relative">
+                                <img src="img/plat-left.png" style="margin-top:-30px;z-index: -1">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <h3 id="turtleHP">15 HP</h3>
+                            <div id="turtleBattleElem">
+                                <img src="img/turtle.png" style="max-width:200px;z-index:1;position:relative">
+                                <img src="img/plat-right.png" style="margin-top:-30px;z-index: -1">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" style="padding-top:20px">
+                        <div class="col-md-6 col-md-offset-3">
+                            <button class="btn btn-danger" id="attackBtn" style="width:100%">
+                            ATTACK
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            
+            </div>
+        
+        </div>
+
+    </div>
+        <script src="js/main.js"></script>
+</body>
+
+</html>
