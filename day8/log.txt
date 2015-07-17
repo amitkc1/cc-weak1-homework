@@ -1,0 +1,800 @@
+Enemy number: 1 is: 
+Type: function getType(){
+    var types =['Ancient Dragon','Prowler','Mighty Grunt'];
+    var number = getRandom(0,2);
+    return types[number];    
+}
+Enemy hitpoints: 24
+Enemy defense: 72
+Enemy number: 2 is: 
+Type: function getType(){
+    var types =['Ancient Dragon','Prowler','Mighty Grunt'];
+    var number = getRandom(0,2);
+    return types[number];    
+}
+Enemy hitpoints: 32
+Enemy defense: 96
+Enemy number: 3 is: 
+Type: function getType(){
+    var types =['Ancient Dragon','Prowler','Mighty Grunt'];
+    var number = getRandom(0,2);
+    return types[number];    
+}
+Enemy hitpoints: 21
+Enemy defense: 63
+Enemy number: 4 is: 
+Type: function getType(){
+    var types =['Ancient Dragon','Prowler','Mighty Grunt'];
+    var number = getRandom(0,2);
+    return types[number];    
+}
+Enemy hitpoints: 46
+Enemy defense: 138
+Enemy number: 5 is: 
+Type: function getType(){
+    var types =['Ancient Dragon','Prowler','Mighty Grunt'];
+    var number = getRandom(0,2);
+    return types[number];    
+}
+Enemy hitpoints: 44
+Enemy defense: 132
+Enemy number: 6 is: 
+Type: function getType(){
+    var types =['Ancient Dragon','Prowler','Mighty Grunt'];
+    var number = getRandom(0,2);
+    return types[number];    
+}
+Enemy hitpoints: 22
+Enemy defense: 66
+Enemy number: 7 is: 
+Type: function getType(){
+    var types =['Ancient Dragon','Prowler','Mighty Grunt'];
+    var number = getRandom(0,2);
+    return types[number];    
+}
+Enemy hitpoints: 25
+Enemy defense: 75
+Enemy number: 8 is: 
+Type: function getType(){
+    var types =['Ancient Dragon','Prowler','Mighty Grunt'];
+    var number = getRandom(0,2);
+    return types[number];    
+}
+Enemy hitpoints: 47
+Enemy defense: 141
+Enemy number: 9 is: 
+Type: function getType(){
+    var types =['Ancient Dragon','Prowler','Mighty Grunt'];
+    var number = getRandom(0,2);
+    return types[number];    
+}
+Enemy hitpoints: 40
+Enemy defense: 120
+Enemy number: 10 is: 
+Type: function getType(){
+    var types =['Ancient Dragon','Prowler','Mighty Grunt'];
+    var number = getRandom(0,2);
+    return types[number];    
+}
+Enemy hitpoints: 42
+Enemy defense: 126
+Enemy number: 11 is: 
+Type: function getType(){
+    var types =['Ancient Dragon','Prowler','Mighty Grunt'];
+    var number = getRandom(0,2);
+    return types[number];    
+}
+Enemy hitpoints: 22
+Enemy defense: 66
+Enemy number: 12 is: 
+Type: function getType(){
+    var types =['Ancient Dragon','Prowler','Mighty Grunt'];
+    var number = getRandom(0,2);
+    return types[number];    
+}
+Enemy hitpoints: 29
+Enemy defense: 87
+Enemy number: 13 is: 
+Type: function getType(){
+    var types =['Ancient Dragon','Prowler','Mighty Grunt'];
+    var number = getRandom(0,2);
+    return types[number];    
+}
+Enemy hitpoints: 24
+Enemy defense: 72
+Enemy number: 14 is: 
+Type: function getType(){
+    var types =['Ancient Dragon','Prowler','Mighty Grunt'];
+    var number = getRandom(0,2);
+    return types[number];    
+}
+Enemy hitpoints: 46
+Enemy defense: 138
+Enemy number: 15 is: 
+Type: function getType(){
+    var types =['Ancient Dragon','Prowler','Mighty Grunt'];
+    var number = getRandom(0,2);
+    return types[number];    
+}
+Enemy hitpoints: 40
+Enemy defense: 120
+Enemy number: 16 is: 
+Type: function getType(){
+    var types =['Ancient Dragon','Prowler','Mighty Grunt'];
+    var number = getRandom(0,2);
+    return types[number];    
+}
+Enemy hitpoints: 35
+Enemy defense: 105
+Enemy number: 17 is: 
+Type: function getType(){
+    var types =['Ancient Dragon','Prowler','Mighty Grunt'];
+    var number = getRandom(0,2);
+    return types[number];    
+}
+Enemy hitpoints: 43
+Enemy defense: 129
+Enemy number: 18 is: 
+Type: function getType(){
+    var types =['Ancient Dragon','Prowler','Mighty Grunt'];
+    var number = getRandom(0,2);
+    return types[number];    
+}
+Enemy hitpoints: 47
+Enemy defense: 141
+Enemy number: 19 is: 
+Type: function getType(){
+    var types =['Ancient Dragon','Prowler','Mighty Grunt'];
+    var number = getRandom(0,2);
+    return types[number];    
+}
+Enemy hitpoints: 47
+Enemy defense: 141
+Enemy number: 20 is: 
+Type: function getType(){
+    var types =['Ancient Dragon','Prowler','Mighty Grunt'];
+    var number = getRandom(0,2);
+    return types[number];    
+}
+Enemy hitpoints: 48
+Enemy defense: 144
+Enemy number: 21 is: 
+Type: function getType(){
+    var types =['Ancient Dragon','Prowler','Mighty Grunt'];
+    var number = getRandom(0,2);
+    return types[number];    
+}
+Enemy hitpoints: 31
+Enemy defense: 93
+Enemy number: 22 is: 
+Type: function getType(){
+    var types =['Ancient Dragon','Prowler','Mighty Grunt'];
+    var number = getRandom(0,2);
+    return types[number];    
+}
+Enemy hitpoints: 31
+Enemy defense: 93
+Enemy number: 23 is: 
+Type: function getType(){
+    var types =['Ancient Dragon','Prowler','Mighty Grunt'];
+    var number = getRandom(0,2);
+    return types[number];    
+}
+Enemy hitpoints: 40
+Enemy defense: 120
+Enemy number: 24 is: 
+Type: function getType(){
+    var types =['Ancient Dragon','Prowler','Mighty Grunt'];
+    var number = getRandom(0,2);
+    return types[number];    
+}
+Enemy hitpoints: 44
+Enemy defense: 132
+Enemy number: 25 is: 
+Type: function getType(){
+    var types =['Ancient Dragon','Prowler','Mighty Grunt'];
+    var number = getRandom(0,2);
+    return types[number];    
+}
+Enemy hitpoints: 49
+Enemy defense: 147
+Enemy number: 26 is: 
+Type: function getType(){
+    var types =['Ancient Dragon','Prowler','Mighty Grunt'];
+    var number = getRandom(0,2);
+    return types[number];    
+}
+Enemy hitpoints: 25
+Enemy defense: 75
+Enemy number: 27 is: 
+Type: function getType(){
+    var types =['Ancient Dragon','Prowler','Mighty Grunt'];
+    var number = getRandom(0,2);
+    return types[number];    
+}
+Enemy hitpoints: 29
+Enemy defense: 87
+Enemy number: 28 is: 
+Type: function getType(){
+    var types =['Ancient Dragon','Prowler','Mighty Grunt'];
+    var number = getRandom(0,2);
+    return types[number];    
+}
+Enemy hitpoints: 33
+Enemy defense: 99
+Enemy number: 29 is: 
+Type: function getType(){
+    var types =['Ancient Dragon','Prowler','Mighty Grunt'];
+    var number = getRandom(0,2);
+    return types[number];    
+}
+Enemy hitpoints: 42
+Enemy defense: 126
+Enemy number: 30 is: 
+Type: function getType(){
+    var types =['Ancient Dragon','Prowler','Mighty Grunt'];
+    var number = getRandom(0,2);
+    return types[number];    
+}
+Enemy hitpoints: 43
+Enemy defense: 129
+Enemy number: 31 is: 
+Type: function getType(){
+    var types =['Ancient Dragon','Prowler','Mighty Grunt'];
+    var number = getRandom(0,2);
+    return types[number];    
+}
+Enemy hitpoints: 40
+Enemy defense: 120
+Enemy number: 32 is: 
+Type: function getType(){
+    var types =['Ancient Dragon','Prowler','Mighty Grunt'];
+    var number = getRandom(0,2);
+    return types[number];    
+}
+Enemy hitpoints: 23
+Enemy defense: 69
+Enemy number: 33 is: 
+Type: function getType(){
+    var types =['Ancient Dragon','Prowler','Mighty Grunt'];
+    var number = getRandom(0,2);
+    return types[number];    
+}
+Enemy hitpoints: 43
+Enemy defense: 129
+Enemy number: 34 is: 
+Type: function getType(){
+    var types =['Ancient Dragon','Prowler','Mighty Grunt'];
+    var number = getRandom(0,2);
+    return types[number];    
+}
+Enemy hitpoints: 23
+Enemy defense: 69
+Enemy number: 35 is: 
+Type: function getType(){
+    var types =['Ancient Dragon','Prowler','Mighty Grunt'];
+    var number = getRandom(0,2);
+    return types[number];    
+}
+Enemy hitpoints: 35
+Enemy defense: 105
+Enemy number: 36 is: 
+Type: function getType(){
+    var types =['Ancient Dragon','Prowler','Mighty Grunt'];
+    var number = getRandom(0,2);
+    return types[number];    
+}
+Enemy hitpoints: 37
+Enemy defense: 111
+Enemy number: 37 is: 
+Type: function getType(){
+    var types =['Ancient Dragon','Prowler','Mighty Grunt'];
+    var number = getRandom(0,2);
+    return types[number];    
+}
+Enemy hitpoints: 21
+Enemy defense: 63
+Enemy number: 38 is: 
+Type: function getType(){
+    var types =['Ancient Dragon','Prowler','Mighty Grunt'];
+    var number = getRandom(0,2);
+    return types[number];    
+}
+Enemy hitpoints: 20
+Enemy defense: 60
+Enemy number: 39 is: 
+Type: function getType(){
+    var types =['Ancient Dragon','Prowler','Mighty Grunt'];
+    var number = getRandom(0,2);
+    return types[number];    
+}
+Enemy hitpoints: 49
+Enemy defense: 147
+Enemy number: 40 is: 
+Type: function getType(){
+    var types =['Ancient Dragon','Prowler','Mighty Grunt'];
+    var number = getRandom(0,2);
+    return types[number];    
+}
+Enemy hitpoints: 22
+Enemy defense: 66
+Enemy number: 41 is: 
+Type: function getType(){
+    var types =['Ancient Dragon','Prowler','Mighty Grunt'];
+    var number = getRandom(0,2);
+    return types[number];    
+}
+Enemy hitpoints: 42
+Enemy defense: 126
+Enemy number: 42 is: 
+Type: function getType(){
+    var types =['Ancient Dragon','Prowler','Mighty Grunt'];
+    var number = getRandom(0,2);
+    return types[number];    
+}
+Enemy hitpoints: 23
+Enemy defense: 69
+Enemy number: 43 is: 
+Type: function getType(){
+    var types =['Ancient Dragon','Prowler','Mighty Grunt'];
+    var number = getRandom(0,2);
+    return types[number];    
+}
+Enemy hitpoints: 32
+Enemy defense: 96
+Enemy number: 44 is: 
+Type: function getType(){
+    var types =['Ancient Dragon','Prowler','Mighty Grunt'];
+    var number = getRandom(0,2);
+    return types[number];    
+}
+Enemy hitpoints: 43
+Enemy defense: 129
+Enemy number: 45 is: 
+Type: function getType(){
+    var types =['Ancient Dragon','Prowler','Mighty Grunt'];
+    var number = getRandom(0,2);
+    return types[number];    
+}
+Enemy hitpoints: 37
+Enemy defense: 111
+Enemy number: 46 is: 
+Type: function getType(){
+    var types =['Ancient Dragon','Prowler','Mighty Grunt'];
+    var number = getRandom(0,2);
+    return types[number];    
+}
+Enemy hitpoints: 43
+Enemy defense: 129
+Enemy number: 47 is: 
+Type: function getType(){
+    var types =['Ancient Dragon','Prowler','Mighty Grunt'];
+    var number = getRandom(0,2);
+    return types[number];    
+}
+Enemy hitpoints: 45
+Enemy defense: 135
+Enemy number: 48 is: 
+Type: function getType(){
+    var types =['Ancient Dragon','Prowler','Mighty Grunt'];
+    var number = getRandom(0,2);
+    return types[number];    
+}
+Enemy hitpoints: 38
+Enemy defense: 114
+Enemy number: 49 is: 
+Type: function getType(){
+    var types =['Ancient Dragon','Prowler','Mighty Grunt'];
+    var number = getRandom(0,2);
+    return types[number];    
+}
+Enemy hitpoints: 44
+Enemy defense: 132
+Enemy number: 50 is: 
+Type: function getType(){
+    var types =['Ancient Dragon','Prowler','Mighty Grunt'];
+    var number = getRandom(0,2);
+    return types[number];    
+}
+Enemy hitpoints: 25
+Enemy defense: 75
+Enemy number: 51 is: 
+Type: function getType(){
+    var types =['Ancient Dragon','Prowler','Mighty Grunt'];
+    var number = getRandom(0,2);
+    return types[number];    
+}
+Enemy hitpoints: 33
+Enemy defense: 99
+Enemy number: 52 is: 
+Type: function getType(){
+    var types =['Ancient Dragon','Prowler','Mighty Grunt'];
+    var number = getRandom(0,2);
+    return types[number];    
+}
+Enemy hitpoints: 39
+Enemy defense: 117
+Enemy number: 53 is: 
+Type: function getType(){
+    var types =['Ancient Dragon','Prowler','Mighty Grunt'];
+    var number = getRandom(0,2);
+    return types[number];    
+}
+Enemy hitpoints: 32
+Enemy defense: 96
+Enemy number: 54 is: 
+Type: function getType(){
+    var types =['Ancient Dragon','Prowler','Mighty Grunt'];
+    var number = getRandom(0,2);
+    return types[number];    
+}
+Enemy hitpoints: 40
+Enemy defense: 120
+Enemy number: 55 is: 
+Type: function getType(){
+    var types =['Ancient Dragon','Prowler','Mighty Grunt'];
+    var number = getRandom(0,2);
+    return types[number];    
+}
+Enemy hitpoints: 42
+Enemy defense: 126
+Enemy number: 56 is: 
+Type: function getType(){
+    var types =['Ancient Dragon','Prowler','Mighty Grunt'];
+    var number = getRandom(0,2);
+    return types[number];    
+}
+Enemy hitpoints: 28
+Enemy defense: 84
+Enemy number: 57 is: 
+Type: function getType(){
+    var types =['Ancient Dragon','Prowler','Mighty Grunt'];
+    var number = getRandom(0,2);
+    return types[number];    
+}
+Enemy hitpoints: 33
+Enemy defense: 99
+Enemy number: 58 is: 
+Type: function getType(){
+    var types =['Ancient Dragon','Prowler','Mighty Grunt'];
+    var number = getRandom(0,2);
+    return types[number];    
+}
+Enemy hitpoints: 23
+Enemy defense: 69
+Enemy number: 59 is: 
+Type: function getType(){
+    var types =['Ancient Dragon','Prowler','Mighty Grunt'];
+    var number = getRandom(0,2);
+    return types[number];    
+}
+Enemy hitpoints: 21
+Enemy defense: 63
+Enemy number: 60 is: 
+Type: function getType(){
+    var types =['Ancient Dragon','Prowler','Mighty Grunt'];
+    var number = getRandom(0,2);
+    return types[number];    
+}
+Enemy hitpoints: 28
+Enemy defense: 84
+Enemy number: 61 is: 
+Type: function getType(){
+    var types =['Ancient Dragon','Prowler','Mighty Grunt'];
+    var number = getRandom(0,2);
+    return types[number];    
+}
+Enemy hitpoints: 37
+Enemy defense: 111
+Enemy number: 62 is: 
+Type: function getType(){
+    var types =['Ancient Dragon','Prowler','Mighty Grunt'];
+    var number = getRandom(0,2);
+    return types[number];    
+}
+Enemy hitpoints: 45
+Enemy defense: 135
+Enemy number: 63 is: 
+Type: function getType(){
+    var types =['Ancient Dragon','Prowler','Mighty Grunt'];
+    var number = getRandom(0,2);
+    return types[number];    
+}
+Enemy hitpoints: 39
+Enemy defense: 117
+Enemy number: 64 is: 
+Type: function getType(){
+    var types =['Ancient Dragon','Prowler','Mighty Grunt'];
+    var number = getRandom(0,2);
+    return types[number];    
+}
+Enemy hitpoints: 24
+Enemy defense: 72
+Enemy number: 65 is: 
+Type: function getType(){
+    var types =['Ancient Dragon','Prowler','Mighty Grunt'];
+    var number = getRandom(0,2);
+    return types[number];    
+}
+Enemy hitpoints: 44
+Enemy defense: 132
+Enemy number: 66 is: 
+Type: function getType(){
+    var types =['Ancient Dragon','Prowler','Mighty Grunt'];
+    var number = getRandom(0,2);
+    return types[number];    
+}
+Enemy hitpoints: 33
+Enemy defense: 99
+Enemy number: 67 is: 
+Type: function getType(){
+    var types =['Ancient Dragon','Prowler','Mighty Grunt'];
+    var number = getRandom(0,2);
+    return types[number];    
+}
+Enemy hitpoints: 43
+Enemy defense: 129
+Enemy number: 68 is: 
+Type: function getType(){
+    var types =['Ancient Dragon','Prowler','Mighty Grunt'];
+    var number = getRandom(0,2);
+    return types[number];    
+}
+Enemy hitpoints: 41
+Enemy defense: 123
+Enemy number: 69 is: 
+Type: function getType(){
+    var types =['Ancient Dragon','Prowler','Mighty Grunt'];
+    var number = getRandom(0,2);
+    return types[number];    
+}
+Enemy hitpoints: 35
+Enemy defense: 105
+Enemy number: 70 is: 
+Type: function getType(){
+    var types =['Ancient Dragon','Prowler','Mighty Grunt'];
+    var number = getRandom(0,2);
+    return types[number];    
+}
+Enemy hitpoints: 24
+Enemy defense: 72
+Enemy number: 71 is: 
+Type: function getType(){
+    var types =['Ancient Dragon','Prowler','Mighty Grunt'];
+    var number = getRandom(0,2);
+    return types[number];    
+}
+Enemy hitpoints: 46
+Enemy defense: 138
+Enemy number: 72 is: 
+Type: function getType(){
+    var types =['Ancient Dragon','Prowler','Mighty Grunt'];
+    var number = getRandom(0,2);
+    return types[number];    
+}
+Enemy hitpoints: 49
+Enemy defense: 147
+Enemy number: 73 is: 
+Type: function getType(){
+    var types =['Ancient Dragon','Prowler','Mighty Grunt'];
+    var number = getRandom(0,2);
+    return types[number];    
+}
+Enemy hitpoints: 23
+Enemy defense: 69
+Enemy number: 74 is: 
+Type: function getType(){
+    var types =['Ancient Dragon','Prowler','Mighty Grunt'];
+    var number = getRandom(0,2);
+    return types[number];    
+}
+Enemy hitpoints: 22
+Enemy defense: 66
+Enemy number: 75 is: 
+Type: function getType(){
+    var types =['Ancient Dragon','Prowler','Mighty Grunt'];
+    var number = getRandom(0,2);
+    return types[number];    
+}
+Enemy hitpoints: 31
+Enemy defense: 93
+Enemy number: 76 is: 
+Type: function getType(){
+    var types =['Ancient Dragon','Prowler','Mighty Grunt'];
+    var number = getRandom(0,2);
+    return types[number];    
+}
+Enemy hitpoints: 32
+Enemy defense: 96
+Enemy number: 77 is: 
+Type: function getType(){
+    var types =['Ancient Dragon','Prowler','Mighty Grunt'];
+    var number = getRandom(0,2);
+    return types[number];    
+}
+Enemy hitpoints: 45
+Enemy defense: 135
+Enemy number: 78 is: 
+Type: function getType(){
+    var types =['Ancient Dragon','Prowler','Mighty Grunt'];
+    var number = getRandom(0,2);
+    return types[number];    
+}
+Enemy hitpoints: 40
+Enemy defense: 120
+Enemy number: 79 is: 
+Type: function getType(){
+    var types =['Ancient Dragon','Prowler','Mighty Grunt'];
+    var number = getRandom(0,2);
+    return types[number];    
+}
+Enemy hitpoints: 44
+Enemy defense: 132
+Enemy number: 80 is: 
+Type: function getType(){
+    var types =['Ancient Dragon','Prowler','Mighty Grunt'];
+    var number = getRandom(0,2);
+    return types[number];    
+}
+Enemy hitpoints: 36
+Enemy defense: 108
+Enemy number: 81 is: 
+Type: function getType(){
+    var types =['Ancient Dragon','Prowler','Mighty Grunt'];
+    var number = getRandom(0,2);
+    return types[number];    
+}
+Enemy hitpoints: 48
+Enemy defense: 144
+Enemy number: 82 is: 
+Type: function getType(){
+    var types =['Ancient Dragon','Prowler','Mighty Grunt'];
+    var number = getRandom(0,2);
+    return types[number];    
+}
+Enemy hitpoints: 44
+Enemy defense: 132
+Enemy number: 83 is: 
+Type: function getType(){
+    var types =['Ancient Dragon','Prowler','Mighty Grunt'];
+    var number = getRandom(0,2);
+    return types[number];    
+}
+Enemy hitpoints: 40
+Enemy defense: 120
+Enemy number: 84 is: 
+Type: function getType(){
+    var types =['Ancient Dragon','Prowler','Mighty Grunt'];
+    var number = getRandom(0,2);
+    return types[number];    
+}
+Enemy hitpoints: 22
+Enemy defense: 66
+Enemy number: 85 is: 
+Type: function getType(){
+    var types =['Ancient Dragon','Prowler','Mighty Grunt'];
+    var number = getRandom(0,2);
+    return types[number];    
+}
+Enemy hitpoints: 29
+Enemy defense: 87
+Enemy number: 86 is: 
+Type: function getType(){
+    var types =['Ancient Dragon','Prowler','Mighty Grunt'];
+    var number = getRandom(0,2);
+    return types[number];    
+}
+Enemy hitpoints: 44
+Enemy defense: 132
+Enemy number: 87 is: 
+Type: function getType(){
+    var types =['Ancient Dragon','Prowler','Mighty Grunt'];
+    var number = getRandom(0,2);
+    return types[number];    
+}
+Enemy hitpoints: 47
+Enemy defense: 141
+Enemy number: 88 is: 
+Type: function getType(){
+    var types =['Ancient Dragon','Prowler','Mighty Grunt'];
+    var number = getRandom(0,2);
+    return types[number];    
+}
+Enemy hitpoints: 33
+Enemy defense: 99
+Enemy number: 89 is: 
+Type: function getType(){
+    var types =['Ancient Dragon','Prowler','Mighty Grunt'];
+    var number = getRandom(0,2);
+    return types[number];    
+}
+Enemy hitpoints: 45
+Enemy defense: 135
+Enemy number: 90 is: 
+Type: function getType(){
+    var types =['Ancient Dragon','Prowler','Mighty Grunt'];
+    var number = getRandom(0,2);
+    return types[number];    
+}
+Enemy hitpoints: 23
+Enemy defense: 69
+Enemy number: 91 is: 
+Type: function getType(){
+    var types =['Ancient Dragon','Prowler','Mighty Grunt'];
+    var number = getRandom(0,2);
+    return types[number];    
+}
+Enemy hitpoints: 48
+Enemy defense: 144
+Enemy number: 92 is: 
+Type: function getType(){
+    var types =['Ancient Dragon','Prowler','Mighty Grunt'];
+    var number = getRandom(0,2);
+    return types[number];    
+}
+Enemy hitpoints: 41
+Enemy defense: 123
+Enemy number: 93 is: 
+Type: function getType(){
+    var types =['Ancient Dragon','Prowler','Mighty Grunt'];
+    var number = getRandom(0,2);
+    return types[number];    
+}
+Enemy hitpoints: 37
+Enemy defense: 111
+Enemy number: 94 is: 
+Type: function getType(){
+    var types =['Ancient Dragon','Prowler','Mighty Grunt'];
+    var number = getRandom(0,2);
+    return types[number];    
+}
+Enemy hitpoints: 30
+Enemy defense: 90
+Enemy number: 95 is: 
+Type: function getType(){
+    var types =['Ancient Dragon','Prowler','Mighty Grunt'];
+    var number = getRandom(0,2);
+    return types[number];    
+}
+Enemy hitpoints: 30
+Enemy defense: 90
+Enemy number: 96 is: 
+Type: function getType(){
+    var types =['Ancient Dragon','Prowler','Mighty Grunt'];
+    var number = getRandom(0,2);
+    return types[number];    
+}
+Enemy hitpoints: 22
+Enemy defense: 66
+Enemy number: 97 is: 
+Type: function getType(){
+    var types =['Ancient Dragon','Prowler','Mighty Grunt'];
+    var number = getRandom(0,2);
+    return types[number];    
+}
+Enemy hitpoints: 29
+Enemy defense: 87
+Enemy number: 98 is: 
+Type: function getType(){
+    var types =['Ancient Dragon','Prowler','Mighty Grunt'];
+    var number = getRandom(0,2);
+    return types[number];    
+}
+Enemy hitpoints: 31
+Enemy defense: 93
+Enemy number: 99 is: 
+Type: function getType(){
+    var types =['Ancient Dragon','Prowler','Mighty Grunt'];
+    var number = getRandom(0,2);
+    return types[number];    
+}
+Enemy hitpoints: 33
+Enemy defense: 99
+Enemy number: 100 is: 
+Type: function getType(){
+    var types =['Ancient Dragon','Prowler','Mighty Grunt'];
+    var number = getRandom(0,2);
+    return types[number];    
+}
+Enemy hitpoints: 38
+Enemy defense: 114
