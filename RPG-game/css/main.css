@@ -1,6 +1,9 @@
 #chooseSection {
-    background: white;
     margin-top:20px;
+}
+
+h1{
+    text-align: center;
 }
 
 #battleSection {
@@ -8,15 +11,27 @@
     margin-top:20px;
 }
 
+
 .charSelected {
 /*    border: 5px solid yellow;*/
-    box-shadow: inset 0 0 0 5px yellow;
+    box-shadow: inset 0 0 0 5px red;
 }
 
-body {
-    background: url("../img/clouds.jpg") no-repeat center center fixed;
+#chooseSection {
+    background: url("../img/Background-1.png") no-repeat center center fixed;
+    z-index: -1;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
 }
+
+
+@media screen and (max-width: 480px) {
+    img{
+        max-width: 50px;
+    }
+}
+
+
+
