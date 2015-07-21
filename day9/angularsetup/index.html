@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+    </head>
+    <body ng-controller="myCtrl">
+        <div ng-app='firstApp'>
+            <div class='row'>
+                <div class='col-md-6 col-md-offset-3'>
+                    <div class="jumbotron" style='margin-top:20px;text-align:center'>
+                        <h2>{{inputText}}</h2>
+                    </div>
+                </div>
+            </div>
+            <div class='row'>
+                <div class='col-md-6 col-md-offset-3'>
+                    <div class="form-control" style='margin-top:20px;width:40%'>
+                        <input type=text style="align:center;width:100%" placeholder="enter your text" ng-model='inputText'>
+            
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js'></script>
+        <script src='main.js'></script>
+    </body>
+</html>
