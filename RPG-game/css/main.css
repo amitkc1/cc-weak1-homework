@@ -4,11 +4,37 @@
 
 h1{
     text-align: center;
+    font-style: oblique;
 }
 
+h2,h3,h4{
+        color:yellow;
+    font-style: oblique;
+}
+
+characterElem img{
+    display: inline-block;
+}
+
+img{
+    max-width: 200px;
+}
+
+#weaponImage{
+        max-width: 75px;
+}
+
+
 #battleSection {
-    background: white;
+    background: url("../img/battlesection.png") no-repeat;
     margin-top:20px;
+}
+
+
+
+#attackBtn{
+    padding-top:20px;
+    width: 100%
 }
 
 
@@ -17,8 +43,9 @@ h1{
     box-shadow: inset 0 0 0 5px red;
 }
 
+
 #chooseSection {
-    background: url("../img/Background-1.png") no-repeat center center fixed;
+    background: url("../img/Background-1.png");
     z-index: -1;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -26,11 +53,120 @@ h1{
     background-size: cover;
 }
 
+#startGameBtn{
+    margin-top: 30px;
+}
 
-@media screen and (max-width: 480px) {
-    img{
+
+@media (max-width:480px) {
+    #chooseSection{
+        background: url("../img/Background-1.png");
+        margin-top: 5px;
+    }
+    
+    characterElem img{
+        display: inline-block;
+    }
+    
+    #chooseSection img,#battleSection img{
+        max-width:60px;
+    }
+    
+    h1,h3{
+        font-size: 0.8em;
+        font-style: oblique;
+    }
+    
+    h2,h3,h4{
+        color:yellow;
+        font-style: oblique;
+    }
+
+    .col-md-4 .well,#characterElem{
+        margin: auto;
+        margin-top: 5px;
+        max-width: 175px;
+        max-height: 150px;
+    }
+    
+    #weaponImage{
         max-width: 50px;
     }
+    
+    #playerNameInput,#attackBtn{
+        margin-top: 5px;
+    }
+    
+    #attackBtn{
+        width:auto;
+    }
+    
+    #battleSection{
+        background: url("../img/battlesection.png") no-repeat;
+    }
+    
+    #startGameBtn{
+        margin-top: 5px;
+    }
+}
+
+
+@media (max-width:768px) {
+    
+    #chooseSection{
+        background: url("../img/Background-1.png");
+        margin-top: 5px;
+    }
+    
+    
+    #chooseSection img,#battleSection img{
+        max-width:100px;
+    }
+    
+    h1,h3{
+        font-size: 1.2em;
+        font-style: oblique;
+    }
+   
+    h2,h3,h4{
+        color:yellow;
+        font-style: oblique;
+    }
+    
+    .col-md-4 .well,#characterElem{
+        margin: auto;
+        margin-top: 5px;
+        max-width: 200px;
+        max-height: 150px;
+    }
+    
+    characterElem img{
+        display: inline-block;
+    }
+    
+    #weaponImage{
+        max-width: 50px;
+    }
+    
+    #playerNameInput,#attackBtn{
+        margin-top: 5px;
+    }
+    
+    #attackBtn{
+        text-align: center;
+        vertical-align: middle;
+        width:auto;
+    }
+    
+    #battleSection{
+        background: url("../img/battlesection.png") no-repeat;
+    }
+    
+    #startGameBtn{
+        margin-top: 5px;
+    }
+    
+
 }
 
 

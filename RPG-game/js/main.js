@@ -8,29 +8,41 @@ var game = null;
 var playerAttackCount = 0;
 var enemyAttackCount = 0;
 var randomNumberCache =[];
+var music;
+var weapons = ['catclaws','staves','omnirod'];
 
 //Element variables
 var chooseSection = document.getElementById("chooseSection");
 var battleSection = document.getElementById("battleSection");
 var characterElem = document.getElementById("characterElem");
+var weaponElem = document.getElementById("characterWeapon");
 var enemyElem = document.getElementById("enemyElem");
 var playerNameInput = document.getElementById("playerNameInput");
 var startGameBtn = document.getElementById("startGameBtn");
 var charHP = document.getElementById("characterHealth");
 var enemyHP = document.getElementById("enemyHealth");
+var header = document.getElementById('header');
 var attackBtn = document.getElementById("attackBtn");
 var yesBtn = document.getElementById("yesBtn");
 var battleStatus = document.getElementById("battleStatus");
+
 
 function abc(){
    startGameBtn.disabled=true;
 };
 
 
-
 var initGame = function () {
+    playMusic("../audio/background.mp3");
     battleSection.style.display = "none";
 };
+
+var playMusic = function(fileName){
+    
+    music = new Audio(fileName); 
+    music.play();
+}
+
 
 var startGame = function (enemyName) {
 
@@ -43,6 +55,7 @@ var startGame = function (enemyName) {
     enemy = new Enemy(enemyName);
     game = new Game(player, enemy);
     chooseSection.style.display = "none";
+    header.style.display="none";
     battleSection.style.display = "block";
     attackBtn.disabled = false;
 };
@@ -59,21 +72,18 @@ var setCharacters = function(){
     if(selectedCharElem==aldrenElem){
         charImage = document.createElement('img');
         charImage.setAttribute('src','../img/aldren.png');
-        charImage.setAttribute('style','max-width:200px');    
         characterElem.appendChild(charImage);
     }
     
     else if(selectedCharElem==badukElem){
         charImage = document.createElement('img')
         charImage.setAttribute('src','../img/Baduk.png');
-        charImage.setAttribute('style','max-width:200px');    
         characterElem.appendChild(charImage);
     }
     
     else if(selectedCharElem==connellElem){
         charImage = document.createElement('img');
         charImage.setAttribute('src','../img/Connell.png');
-        charImage.setAttribute('style','max-width:200px');    
         characterElem.appendChild(charImage);
     }
     enemyName = generateRandomEnemy();
@@ -81,21 +91,18 @@ var setCharacters = function(){
     if(enemyName=='Weak Skeleton'){
         enemyImage = document.createElement('img');
         enemyImage.setAttribute('src','../img/enemy1.png');
-        charImage.setAttribute('style','max-width:200px'); 
         enemyElem.appendChild(enemyImage);
     }
     
     else if(enemyName=='Fierce Demon'){
         enemyImage = document.createElement('img');
         enemyImage.setAttribute('src','../img/enemy2.png');
-        charImage.setAttribute('style','max-width:200px'); 
         enemyElem.appendChild(enemyImage);
     }
     
     else if(enemyName=='Ugly Wargile'){
         enemyImage = document.createElement('img');
         enemyImage.setAttribute('src','../img/enemy3.png');
-        charImage.setAttribute('style','max-width:200px'); 
         enemyElem.appendChild(enemyImage);
     }
     startGame(enemyName);
@@ -110,17 +117,20 @@ var Game = function (player, enemy) {
 
     this.checkGameStatus = function () {
         if (self.player.hp <= 0 || self.enemy.hp <= 0) {
+            playMusic("../audio/finish.wav");
             gameActive = false;
         }
         
         if (!gameActive) {
             if(self.enemy.hp<=0){
+                playMusic("../audio/finish.wav");
                 battleStatus.innerHTML = player.name +" killed "+enemy.name;
                 if(randomNumberCache.length<3){
                     setCharacters();
                 }
                 
                 else{
+                    playMusic("../audio/finish.wav");
                     battleStatus.innerHTML = "GAME OVER..! \n"+player.name+" won the game.";
                     attackBtn.disabled = true;
                     self.restartGame();
@@ -128,6 +138,7 @@ var Game = function (player, enemy) {
                 
             }
             else{
+                playMusic("../audio/finish.wav");
                 battleStatus.innerHTML = "GAME OVER";
                 attackBtn.disabled = true;
                 this.restartGame();
@@ -151,6 +162,7 @@ var Game = function (player, enemy) {
     };
 
     this.processAttack = function (attacker, victim,counter) {
+        playMusic("../audio/punch.wav");
         if(counter<3){
             var attPwr = attacker.getAttackPwr();
             victim.getAttacked(attPwr);
@@ -194,22 +206,39 @@ var generateRandomEnemy = function(){
 
 var Player = function (hpElem) {
     var self = this;
-    if(randomNumberCache.length%2!=0){
-        this.hp = 150;
-    }else{
-        this.hp=hpElem.innerHTML.match(/\d+/)[0];
-    }
+    var weaponImage = null;
+    function getHp(){
+        if(randomNumberCache.length%2!=0){
+            return 150;
+        }
+        else{
+            return hpElem.innerHTML.match(/\d+/)[0];
+        }
+    };
     
+    this.hp = getHp();
+    this.weapon = weapons[randomNumberCache.length];
     this.name = playerNameInput.value;
     this.playerHPElem = hpElem;
     
-    var displayHealth = function() {
+    var displayHealthAndWeapon = function() {
         self.playerHPElem.innerHTML = "Health: "+self.hp + ", "+self.name;
+        weaponElem.innerHTML ="Using weapon: "+self.weapon;
+//        if(weaponElem.innerHTML!==weapons[randomNumberCache.length]){
+//            weaponImage = document.createElement('img');
+//            weaponImage.setAttribute('src','../img/'+self.weapon+'.png');
+//            weaponImage.setAttribute('id','weaponImage');
+//            characterElem.appendChild(weaponImage);
+//        }
+        
+        
     };
+    
+    
     
     this.getAttacked = function (pointsToLose) {
         self.hp -= pointsToLose;
-        displayHealth();
+        displayHealthAndWeapon();
     };
     
     this.getAttackPwr = function () {
@@ -219,7 +248,7 @@ var Player = function (hpElem) {
         return Math.floor(Math.random() * (max - min + 1)) + min;
     };
     
-    displayHealth();
+    displayHealthAndWeapon();
 
 };
 
@@ -251,6 +280,7 @@ var Enemy = function (enemyName) {
 
 
 startGameBtn.addEventListener('click', function () {
+    playMusic("../audio/interface.wav");
     var name = playerNameInput.value;
     setCharacters();
 
@@ -279,6 +309,7 @@ playerNameInput.addEventListener('keyup',function(){
 
 
 aldrenElem.addEventListener('click', function () {
+    playSelectionMusic();
     selectedCharElem = aldrenElem;
     selectedCharElem.className = "well charSelected";
     badukElem.className = "well";
@@ -287,6 +318,7 @@ aldrenElem.addEventListener('click', function () {
 });
 
 badukElem.addEventListener('click', function () {
+    playSelectionMusic();
     selectedCharElem = badukElem;
     selectedCharElem.className = "well charSelected";
     aldrenElem.className = "well";
@@ -295,6 +327,7 @@ badukElem.addEventListener('click', function () {
 });
 
 connellElem.addEventListener('click', function () {
+    playSelectionMusic();
     selectedCharElem = connellElem;
     selectedCharElem.className = "well charSelected";
     aldrenElem.className = "well";
@@ -305,6 +338,7 @@ connellElem.addEventListener('click', function () {
 
 
 attackBtn.addEventListener('click', function () {
+    
     playerAttackCount  = playerAttackCount+1;
     attackBtn.disabled =true;          
     if (game.processAttack(game.player, game.enemy,playerAttackCount)) {
@@ -317,6 +351,11 @@ attackBtn.addEventListener('click', function () {
         
     }  
 });
+
+function playSelectionMusic(){
+    music.pause();
+    playMusic("../audio/selection.wav");
+};
 
 yesBtn.addEventListener('click',function(){
     location.reload();
