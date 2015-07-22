@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+    </head>
+    <body ng-app='firstApp' ng-controller='mainCtrl'>
+        <div class="row">
+            <div class='col-md-6 col-md-offset-3'>
+                <div class="jumbotron">
+                    <h2 ng-model='result'>Sum of two values:{{result}}</h2><br/>
+                    <h2 ng-model='multiplication'>Product of two values:{{multiplication}}</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class='col-md-6 col-md-offset-3'>
+                    <div class="form-control" style='margin-top:20px;width:40%'>
+                        <input type=text style="align:center;width:100%" placeholder="number1" ng-model='number1'></input>
+                    </div>
+                    <div class="form-control" style='margin-top:20px;width:40%'>
+                        <input type=text style="align:center;width:100%" placeholder="number2" ng-model='number2'></input>
+                    </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class='col-md-6 col-md-offset-3' style='margin-top:20px'>
+                <button id='sum' ng-click="sum()">Sum...!</button><br/>
+                <button id='multiplication' ng-click="product()">Multiply...!</button>
+            </div>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
+        <script src="calculator.js"></script>
+    </body>
+</html>
