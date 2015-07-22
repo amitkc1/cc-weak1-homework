@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+         <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+    </head>
+    <body ng-app='angApp'>
+        <div class='row' ng-controller='mainCtrl'>
+            <div class='col-md-4'>
+                <div class='well'>
+                    <h2>{{firstText}}</h2>
+                </div>
+            </div>
+            <div class='col-md-4'>
+                <div class='well'>
+                    <h2>{{secondText}}</h2>
+                </div>
+            </div>
+            <div class='col-md-4'>
+                <div class='well'>
+                    <h2>{{thirdText}}</h2>
+                </div>
+            </div>
+        </div>
+        <div class='row'>
+            <div class='col-md-4'>
+                <div class='well'>
+                    <input id='firstText' placeholder="enter your text here" ng-model='firstText'>
+                </div>
+            </div>
+            <div class='col-md-4'>
+                <div class='well'>
+                    <input id='secondText' placeholder="enter your text here" ng-model='secondText'>
+                </div>
+            </div>
+            <div class='col-md-4'>
+                <div class='well'>
+                    <input id='thirdText' placeholder="enter your text here" ng-model='thirdText'>
+                </div>
+            </div>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
+        <script src="angApp.js"></script>
+    </body>
+</html>
