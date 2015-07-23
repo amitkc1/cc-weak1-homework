@@ -1,0 +1,92 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="main.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body ng-app='badgeApp'>
+        <div class='container' ng-controller='inputCtrl' id="firstSection">
+            <form name='myForm'>
+            <div class='row'>
+                <div class='col-md-6 col-md-offset-3'>
+                    
+                    <div class='row'>
+                        <div class='col-md-6'>
+                            
+                            <input id='firstName' class='form-control' placeholder="Enter your first name" ng-model='firstName' ng-minlength='3' required>
+                            
+                            </div>
+                        <div class='col-md-6'>
+                            <input id='lastName' class='form-control' placeholder="Enter your last name" ng-model='lastName' ng-minlength='3' required>
+                        </div>
+                    </div>
+                    <div class='row' style='margin-top:5px'>
+                        <div class='col-md-6'>
+                            <input id='email' class='form-control' placeholder="Enter your email" ng-model='email' ng-minlength='3' required>
+                        </div>
+                        <div class='col-md-6'>
+                            <input id='placeOfBirth' class='form-control' placeholder="Enter your place of birth" ng-model='placeOfBirth' ng-minlength='3' required>
+                        </div>
+                    </div>
+                    <div class='row' style='margin-top:5px'>
+                        <div class='col-md-6'>
+                            <input type ="number" id='phone' class='form-control' placeholder="phone no." ng-model='phone' ng-minlength='10'  required>
+                        </div>
+                        <div class='col-md-6'>
+                            <input id='favoritefood' class='form-control' placeholder="Favorite food" ng-model='favoritefood' ng-minlength='3' required>
+                        </div>
+                    </div>
+                    <div class='row' style='margin-top:5px'>
+                        <div class='col-md-12'>
+                        <input id='userinfo' class='form-control' placeholder="tell us about yourself" ng-model='userinfo' ng-minlength='3' required>
+                        </div>
+                    </div>
+                    <div class='row' style='margin-top:5px'>
+                        <div class='col-md-4 col-md-offset-4'>
+                            <button ng-click="submit()" ng-disabled="myForm.$invalid">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </form>    
+            <div class='row ' ng-controller='inputCtrl' id='secondSection'>
+                <h2 style='text-align:center; height:50px;jumbotron'>Badge</h2>
+                <div class='col-md-6 col-md-offset-3'>
+                    <div class='row' style='margin-top:5px'>
+                        <div class='col-md-6'>
+                            <p ng-model='firstNameResult'>{{firstNameResult}}</p>
+                        </div>
+                        <div class='col-md-6'>
+                            <p ng-model='lastNameResult'>{{lastNameResult}}</p>
+                        </div>
+                    </div>
+                    <div class='row' style='margin-top:5px'>
+                        <div class='col-md-6'>
+                              <p ng-model='emailResult'>{{emailResult}}</p>
+                        </div>
+                        <div class='col-md-6'>
+                            <p ng-model='placeOfBirthResult'>{{placeOfBirthResult}}</p>
+                        </div>
+                    </div>
+                    <div class='row' style='margin-top:5px'>
+                        <div class='col-md-6'>
+                            <p ng-model='phoneResult'>{{phoneResult}}</p>
+                        </div>
+                        <div class='col-md-6'>
+                            <p ng-model='favoritefoodResult'>{{favoritefoodResult}}</p>
+                        </div>
+                    </div>
+                    <div class='row' style='margin-top:5px'>
+                        <div class='col-md-12'>
+                            <p ng-model='userinfoResult'>{{userinfoResult}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
+        <script src="Angular-Badge.js"></script>
+    </body>
+</html>

@@ -1,0 +1,54 @@
+#firstSection {
+    border-radius: 25px;
+    border: 2px solid black;
+    padding: 20px; 
+    width: 800px;
+    height: 275px;    
+}
+
+.container{
+    margin-top: 60px;
+}
+
+
+#secondSection {
+    border-radius: 25px;
+    border: 2px solid black;
+    padding: 20px; 
+    width: 800px;
+    height: 275px;    
+}
+
+#userinfo{
+    height:100px;
+}
+
+@media screen and (max-width: 480px) {
+    .container{
+        margin-top: 20px;
+    }
+    
+    #firstSection {
+        border-radius: 25px;
+        border: 2px solid black;
+        padding: 5px; 
+        width: 400px;
+        height: 295px;    
+     }
+    
+    #secondSection {
+        margin-top: 20px;
+        border-radius: 25px;
+        border: 2px solid black;
+        padding: 5px; 
+        width: 400px;
+        height: 360px;    
+     }
+     
+     #userinfo{
+        height:30px;
+     }
+    
+    
+    
+}
