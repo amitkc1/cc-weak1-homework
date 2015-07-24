@@ -9,4 +9,5 @@ function splosion(answer){
         answer = answer.substring(0,answer.length-1);
     }
     console.log("Your stringsplosion is: "+newAnswer);
+    return newAnswer;
 }
