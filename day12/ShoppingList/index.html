@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body ng-app='shoppingList'>
+        <div class='container' ng-controller='listCtrl'>
+            <h3>Mom's shopping list</h3>
+            <input class='form-control' ng-model='shoppingItem'>
+            <button ng-click='add()'>Add</button>
+            <ul>
+                <li ng-model='listItems' ng-repeat='item in shoppingList'>
+                    {{item}}
+                    <button ng-click='remove($index)'><img src="red_cross.png">                   </button>
+                </li>
+            </ul>
+        </div>
+         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
+        <script src="shoppingList.js"></script>
+    </body>
+</html>

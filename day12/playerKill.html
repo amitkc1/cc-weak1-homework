@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body ng-app='playerKill'>
+        <div ng-controller='mainCtrl' >
+            <h3>Player kills:</h3>
+          <ul>
+          <li ng-repeat='item in players'>
+           <!-- {{item}} -->
+              <div ng-repeat='x in item.kills'>
+                {{x.clan}}
+                  <div ng-repeat='c in x.clan'>
+                    {{c}}
+                  </div>
+              </div>
+          </li>
+          </ul>
+        </div>
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
+        <script src="PlayerKills.js"></script>
+    </body>
+</html>
