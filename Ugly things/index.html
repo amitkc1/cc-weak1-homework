@@ -28,30 +28,35 @@
                 </div>
             </div>
             <div class='row'>
-                    <div class="row">
-                        <div class='col-md-4' ng-repeat="photo in photos track by $index">
-                            <ul>
-                                <li>
-                                    <h4>{{photo.title}}</h4>
-                                    <figcaption ng-model="imageCaption">{{photo.caption}}</figcaption>
-                                    <br/>
-                                    <br/>
-                                    <img id=renderedImage ng-src="{{photo.src}}" ng-model="renderedImage">
-                                    <button ng-click="remove(index)">
-                                        Delete Image
-                                    </button>
-                                    <br/>
-                                    <label>Comments:</label>
-                                    <br/>
-                                    <div class='comments'>
-                                            <p ng-model='imageComment'>{{imageComment}}</p>
-                                    </div>
-                                    <input id="commentInput" type='text' ng-model='commentInput'>
-                                    <button id='commentButton' ng-click="addComment()">Add comment</button>
-                                </li>
-                            </ul>        
-                        </div>
-                    </div>
+                        <div class='col-md-4' id="imageContainer"ng-repeat="photo in photos track by $index">
+                                <ul>
+                                    <li>
+                                            <h4>{{photo.title}}</h4>
+                                            <figcaption ng-model="imageCaption">{{photo.caption}}</figcaption>
+                                            <br/>
+                                            <br/>
+                                            <img id=renderedImage ng-src="{{photo.src}}" ng-model="renderedImage">
+                                            <button ng-click="remove(index)">
+                                                Delete Image
+                                            </button>
+                                        <br/>
+                                    </li>
+                                </ul>
+                                <label>Comments:</label>
+                                  <br/>
+                                <input id="comment" type='text' ng-model='commentInput'>
+                                <button id='commentButton' ng-click="addComment($index,commentInput)">Add comment</button>
+                                <ul ng-repeat="comment in photo.comments track by $commentIndex">
+                                    <li>
+                                        {{comment}}
+                                        <button ng-click="removeComment($index,$commentIndex)">
+                                            <img src="red_cross.png" style="width:10px; height:10px">
+                                        </button>
+                                        <br/>
+                                    </li>
+                                </ul>
+                                
+                        </div>           
             </div>
         </div>
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>

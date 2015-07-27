@@ -12,10 +12,10 @@
     height: 150px;
 }
 
-#commentInput{
-    margin-top: 10px;
-    height:100px;
+#imageContainer{
+    height: 200px;
 }
+
 
 @media (max-width:480px){
     .jumbotron{
@@ -31,7 +31,7 @@
         width: 100px;
         height: 100px;
     }
-    #commentInput{
+    #comment{
         margin-top:10px;
         height:50px;
     }
