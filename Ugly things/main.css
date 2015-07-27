@@ -1,0 +1,38 @@
+.jumbotron{
+    background-color:skyblue; 
+    height:200px
+}
+
+#Submit{
+    margin-top: 20px;
+}
+
+#renderedImage{
+    width: 150px;
+    height: 150px;
+}
+
+#commentInput{
+    margin-top: 10px;
+    height:100px;
+}
+
+@media (max-width:480px){
+    .jumbotron{
+        background-color:skyblue; 
+        height:150px
+    }
+
+    #Submit{
+        margin-top: 10px;
+    }
+
+    #renderedImage{
+        width: 100px;
+        height: 100px;
+    }
+    #commentInput{
+        margin-top:10px;
+        height:50px;
+    }
+}

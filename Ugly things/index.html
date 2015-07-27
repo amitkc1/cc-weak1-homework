@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="main.css">
+    </head>
+    <body ng-app="uglyThings">
+        <div class='container' ng-controller="inputCtrl">
+            <div class='row'>
+                <div class='col-md-8 col-md-offset-2 jumbotron'>
+                    <div class="row">
+                        <div class='col-md-4'>
+                            <input id='tile' placeholder="title" ng-model='Title'>
+                        </div>
+                        <div class='col-md-4'>
+                            <input id='URL' placeholder="image URL" ng-model='URL'>
+                        </div>
+                        <div class='col-md-4'>
+                            <input id='Description' placeholder="Description " ng-model='description'>
+                        </div>
+                        <div class='col-md-4 col-md-offset-4'>
+                            <button id='Submit' ng-click='submit()'>Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class='row'>
+                    <div class="row">
+                        <div class='col-md-4' ng-repeat="photo in photos track by $index">
+                            <ul>
+                                <li>
+                                    <h4>{{photo.title}}</h4>
+                                    <figcaption ng-model="imageCaption">{{photo.caption}}</figcaption>
+                                    <br/>
+                                    <br/>
+                                    <img id=renderedImage ng-src="{{photo.src}}" ng-model="renderedImage">
+                                    <button ng-click="remove(index)">
+                                        Delete Image
+                                    </button>
+                                    <br/>
+                                    <label>Comments:</label>
+                                    <br/>
+                                    <div class='comments'>
+                                            <p ng-model='imageComment'>{{imageComment}}</p>
+                                    </div>
+                                    <input id="commentInput" type='text' ng-model='commentInput'>
+                                    <button id='commentButton' ng-click="addComment()">Add comment</button>
+                                </li>
+                            </ul>        
+                        </div>
+                    </div>
+            </div>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
+        <script src="UglyThings.js"></script>
+    </body>
+</html>
