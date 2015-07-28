@@ -30,10 +30,9 @@
             <div class='row'>
                         <div class='col-md-4' id="imageContainer"ng-repeat="photo in photos track by $index">
                                 <ul>
-                                    <li>
-                                            <h4>{{photo.title}}</h4>
+                                    <li id="photolist">
+                                            <h4 id='phototitle'>{{photo.title}}</h4>
                                             <figcaption ng-model="imageCaption">{{photo.caption}}</figcaption>
-                                            <br/>
                                             <br/>
                                             <img id=renderedImage ng-src="{{photo.src}}" ng-model="renderedImage">
                                             <button ng-click="remove(index)">
@@ -45,9 +44,10 @@
                                 <label>Comments:</label>
                                   <br/>
                                 <input id="comment" type='text' ng-model='commentInput'>
-                                <button id='commentButton' ng-click="addComment($index,commentInput)">Add comment</button>
+                                 <button id='commentButton' ng-click="addComment($index,commentInput,$commentIndex)">Add comment</button>
                                 <ul ng-repeat="comment in photo.comments track by $commentIndex">
-                                    <li>
+                                   
+                                    <li id='photocomment'>
                                         {{comment}}
                                         <button ng-click="removeComment($index,$commentIndex)">
                                             <img src="red_cross.png" style="width:10px; height:10px">

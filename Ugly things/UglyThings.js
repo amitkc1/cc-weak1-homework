@@ -2,6 +2,7 @@ var app = angular.module('uglyThings',[]);
 app.controller('inputCtrl',function($scope){
     $scope.photos =[];
     $scope.counter =0;
+    
     $scope.submit = function(){
         $scope.photos.push({
             src: ($scope.URL),
