@@ -1,5 +1,5 @@
 angular.module('cartoonNetworkApp')
-app.service('displayService',function(){
+.service('displayService',function(){
     
     this.cartoons =[];
 
