@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="main.css">
+    </head>
+    <body ng-app="cartoonNetworkApp">
+        <div class='container' ng-controller="mainController">
+            <div class='row'>
+                <div class='col-md-8 col-md-offset-2 jumbotron' style="background-color:skyblue">
+                    <div class="row">
+                        <div class='col-md-4'>
+                            <input id='tile' placeholder="title" ng-model='formData.title'>
+                        </div>
+                        <div class='col-md-4'>
+                            <input id='URL' placeholder="image URL" ng-model='formData.url'>
+                        </div>
+                        <div class='col-md-4'>
+                            <input id='Description' placeholder="Description " ng-model='formData.description'>
+                        </div>
+                        <div class='col-md-4 col-md-offset-4'>
+                            <button id='Submit' ng-click='submit()'>Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class='row' ng-controller="displayCartoon">
+                        <div class='col-md-4' ng-repeat="cartoon in getCartoons() track by $index">
+                            <ul>
+                                <li>
+                                 <label>{{cartoon.title}}</label>
+                                 <br/>
+                                    <label>{{cartoon.description}}</label>
+                                    <br/>
+                                 <img ng-src='{{cartoon.url}}' width="100px" height="100px">
+                                </li>
+                            </ul>
+                        </div>
+            </div>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
+        <script src="cartoonNetwork.js"></script>
+        <script src="displayCartoon.js"></script>
+    </body>
+</html>
