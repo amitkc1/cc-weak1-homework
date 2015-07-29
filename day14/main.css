@@ -1,0 +1,65 @@
+
+#navBar{
+    background-color:#2c3e50;
+}
+h2{
+    color:white;
+    font-weight: bold;
+}
+
+a{
+    color:white;
+    font-weight: bold;
+}
+/*
+#imageContainer{
+    background-color:#18bc9c;
+    height: 600px;
+}
+
+#profileImage{
+    margin-top: 100px;
+}
+
+#image{
+    width:250px;
+    height:250px;
+}
+
+#labelUnderImage{
+    font-size: 2.5em;
+}
+  fa fa-star-o{
+        color:white;
+    }
+
+#bottomLabel{
+    color: white;
+    text-align: center;
+    margin-top: 40px;
+    margin-left: 380px;
+}
+h3 {
+   width: 100%; 
+   text-align: center; 
+   border-bottom: 1px solid #FFF; 
+   line-height: 0.1em;
+   margin: 10px 0 20px; 
+} 
+
+h3 span { 
+    background:#FFF; 
+    padding:10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+*/
+
+#imageContent{
+    background-color:#18bc9c;
+}
+
+#image{
+     margin-top: 150px;
+}
