@@ -2,17 +2,24 @@ var app = angular.module('clickerApp',[]);
 app.controller("clickController",function($scope,blueService,redService){
 
     $scope.blueButton = function(){
-       if(blueClickCounter==0){
+       if(blueService.getBlueLabel()==0){
             blueService.resetBlue();
        }
+        else if(redService.getRedLabel()==0){
+            redService.resetRed();
+        }
         blueService.incrementBlueLabel();
    };
    
    $scope.redButton = function(){
-       if(redClickCounter==0){
+       if(redService.getRedLabel()==0){
             redService.resetRed();
-       } 
-       redService.incrementBlueLabel();    
+       }
+       else if(blueService.getBlueLabel()==0){
+            blueService.resetBlue();
+        }
+       redService.incrementRedLabel();
+       blueService.decrementBlueLabel();
    };
    
    $scope.getBlueLabel = function (){
@@ -43,12 +50,12 @@ app.service('blueService',function(redService){
     }
     
     this.resetBlue = function(){
-        blueClickCounter=0;
+        blueClickCounter=100;
     }
 
 });
 
-app.service('redService',function(blueService){
+app.service('redService',function(){
     var redClickCounter = 100;
     
     this.getRedLabel = function(){
@@ -65,7 +72,7 @@ app.service('redService',function(blueService){
         
     }
     this.resetRed = function(){
-        redClickCounter=0;
+        redClickCounter=100;
     }
 
 });

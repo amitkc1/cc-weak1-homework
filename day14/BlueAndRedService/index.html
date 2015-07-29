@@ -10,11 +10,11 @@
         <div class='container' ng-controller="clickController">
             <div class="row" style="margin-top:50px">
                 <div class="col-md-6">
-                    <label ng-model='getBlueLabel()'></label>
+                    <label>{{getBlueLabel()}}</label><br/>
                     <button class="btn btn-primary" ng-click="blueButton()" id="blueButton">Blue Button</button>
                 </div>
                 <div class="col-md-6">
-                    <label ng-model='getRedLabel()'></label>
+                    <label>{{getRedLabel()}}</label><br/>
                     <button class="btn btn-danger" ng-click="redButton()" id="redButton">Red Button</button>
                 </div>
             </div>
