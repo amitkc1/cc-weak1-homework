@@ -39,6 +39,8 @@ a{
     margin-top: 40px;
     margin-left: 380px;
 }
+
+
 h3 {
    width: 100%; 
    text-align: center; 
@@ -53,13 +55,49 @@ h3 span {
     margin-left: 10px;
     margin-right: 10px;
 }
-
 */
+
+.fa fa-star{
+    margin-left:10px;
+    margin-right: 10px;
+    display:inline-block;
+    color:white;
+    z-index: 1;
+}
+
+#horizontalLine{
+   width: 100%; 
+   text-align: center;
+   vertical-align: middle;    
+   border-top: 2px solid #FFF; 
+   line-height: 0.3em;
+    clear: both;
+} 
+
+
+
+#horizontalLine span {
+    text-align: center;
+   vertical-align: middle;    
+    z-index: -1;
+}
 
 #imageContent{
     background-color:#18bc9c;
+    height: 550px;
 }
 
 #image{
-     margin-top: 150px;
+     margin-top: 100px;
+}
+
+@media(max-width:480px){
+    #profileImage{
+        width:200px;
+        height:200px;
+    }
+    #imageContent{
+        background-color:#18bc9c;
+        height: 500px;
+    }   
 }
