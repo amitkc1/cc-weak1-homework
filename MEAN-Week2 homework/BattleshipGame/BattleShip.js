@@ -1,7 +1,7 @@
 var readlineSync = require("readline-sync");
 //var fs = require("fs");
-var xCoordinate = 0;
-var yCoordinate = 0;
+//var xCoordinate = 0;
+//var yCoordinate = 0;
 var coordinates = [];
 var grid = [];
 var rows = 10;
@@ -16,26 +16,31 @@ getUserInput();
 
 function getUserInput(){
     if(hitCounter<3){
-        xCoordinate = readlineSync.question("Look at the grid. Tell me what line you wanna hit..! Range is 0 to 9: ");
-        yCoordinate = readlineSync.question("Now, tell me what column you wanna hit..! Range is 0 to 9: ");
-        if(coordinates.indexOf({x:xCoordinate,y:yCoordinate})==-1){
-            coordinates.push({x:xCoordinate,y:yCoordinate});   
-        }
-        
-        else {
-            console.log("These coordinates have been entered previously. Please enter other coordinates.");
-            getUserInput();
-        }
+        var xCoordinate = readlineSync.question("Look at the grid. Tell me what line you wanna hit..! Range is 0 to 9: ");
+        var yCoordinate = readlineSync.question("Now, tell me what column you wanna hit..! Range is 0 to 9: ");
         
         if(xCoordinate>9||yCoordinate>9||!xCoordinate||!yCoordinate||xCoordinate<0||yCoordinate<0){
             console.log("Coordinates are supposed to be between 0 and 9. Please re-enter the coordinates.");
             getUserInput();
         }
+        
+        debugger;
+        var obj = {x:xCoordinate,y:yCoordinate}
+        if(containsObject(obj)) {//containsObject(obj)){  
+            console.log("These coordinates have been entered previously. Please enter other coordinates.");
+            getUserInput();
+        }
+        
+        else {
+            coordinates.push({x:xCoordinate,y:yCoordinate}); 
+        }
+        
         counter++;
     }
     else if (hitCounter==3){
         console.log("You have won the game...! Resetting the grid...");
         counter=0;
+        coordinates.splice(0,coordinates.length);
         hitCounter=0;
         createGrid();
         printGrid();
@@ -43,28 +48,37 @@ function getUserInput(){
     }
     
     if(counter>0){
-        hitOrMiss();
+        hitOrMiss(xCoordinate, yCoordinate);
     }
     
     
     
 }
 
-function hitOrMiss(){
-    if(grid[xCoordinate][yCoordinate].ship==true){
-        console.log("\n\033[0;32m\033[1mBravo, that was a hit..!\033[0m\033[0m");
-        grid[xCoordinate][yCoordinate].hit = true;
-        grid[xCoordinate][yCoordinate].visualStatus = "\033[1mX\033[0m  ";
-        hitCounter++;
-        counter++;
-        printGrid();
-    }
+function containsObject(obj) {
+    console.log("Coords:", coordinates);
+    return coordinates.reduce(function(prev, curr) {
+        return prev || (curr.x == obj.x && curr.y == obj.y);
+    }, false);
+}
 
-    else{
-        console.log("\n\033[0;31m\033[1mOops..! That was a miss..!\033[0m\033[0m");
-        grid[xCoordinate][yCoordinate].visualStatus = "\033[1mM\033[0m  ";
-        counter++;
-        printGrid();
+function hitOrMiss(x,y){
+    if (typeof x !== "undefined" && typeof y !== "undefined") {
+        if(grid[x][y].ship==true){
+            console.log("\n\033[0;32m\033[1mBravo, that was a hit..!\033[0m\033[0m");
+            grid[x][y].hit = true;
+            grid[x][y].visualStatus = "\033[1mX\033[0m  ";
+            hitCounter++;
+            counter++;
+            printGrid();
+        }
+
+        else{
+            console.log("\n\033[0;31m\033[1mOops..! That was a miss..!\033[0m\033[0m");
+            grid[x][y].visualStatus = "\033[1mM\033[0m  ";
+            counter++;
+            printGrid();
+        }
     }
     
     getUserInput();
@@ -118,6 +132,15 @@ function printGrid(){
       console.log("\n");
 }
 
+//function containsObject(obj){
+//    for(var number=0;number<coordinates.length;number++){
+//        if(coordinates[number].x==obj.x&&coordinates[number].y==obj.y)
+//            console.log("Object: "+obj.toString()+" exists at "+number);
+//         return true;
+//    }
+//    console.log("Returning false from containsObject");
+//    return false;
+//}
 //function printShip(){
 //    fs.readFile('battleship.txt', 'utf8', function(err, data) {
 //    if (err) throw err;
