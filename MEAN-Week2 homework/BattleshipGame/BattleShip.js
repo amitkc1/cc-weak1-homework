@@ -114,10 +114,7 @@ function createGrid(){
     }
     if(counter>0){
         hitOrMiss();
-    }
-    
-    
-    
+    }    
     
 };
 

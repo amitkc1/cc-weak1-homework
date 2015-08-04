@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+    </head>
+    <body ng-app='godfatherApp'>
+        <div class='container' ng-controller='godfatherCtrl'>
+            <div class='row' style='margin-bottom:10px'>
+                <div class='col-md-12' style='background-color:black'>
+                    <img src ="godfather.png" width='150px'                    height='150px' style="margin-left:0px;">
+                    <h4 style='display:inline;color:red'>Don Corleone's Hit List</h4>
+                </div>
+            </div>    
+            
+            <div class='row'>
+                <div class='col-md-4' style='padding-right:10px' ng-repeat='char in characters'>
+                <div class='well'>    
+                    <img ng-src='{{char.image}}' width='150px'                    height='150px' style='margin-left:auto;margin-right:auto;display:block'><br/>
+                    <label style="margin-left:auto;margin-right:auto">{{char.name}}</label>
+                </div>
+                </div>
+            </div>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
+        <script src='godfather.js'></script>
+    </body>
+</html>
