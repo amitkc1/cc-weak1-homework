@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+    </head>
+    <body ng-app='starwarsApp'>
+        <div class='container' ng-controller='starwarsCtrl' style='background-color:black'>
+            <div class='row' style='margin-bottom:10px'>
+                <div class='col-md-12' style='background-color:black;height:200px'>
+                    <h1 style="color:yellow;text-align:center">STAR WARS</h1>
+                </div>
+            <div class='row' style='margin-bottom:10px'>
+                <div class='col-md-12'>
+                    <div class='well'>
+                        <label style='color:white'>Example Request</label>
+                        <input ng-model='endPoint' width="200px">
+                    </div>
+                    </div>    
+                </div>    
+            <div class='row'>
+                <div class='col-md-12' style='padding-right:10px' style='background-color:black'>
+                <label style='color:white '>Example Response</label>
+                <div class='well'>
+                    <p>Title: {{response.title}}</p>
+                    <p>Produce: {{response.producer}}</p>
+                    <p>Director: {{response.director}}</p>
+                    <p>Opening_crwal: {{response.opening_crawl}}</p>
+                </div>
+            </div>
+          </div>
+        </div>
+            <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
+        <script src='starwars.js'></script>
+    </body>
+    
+</html>
