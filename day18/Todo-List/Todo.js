@@ -2,14 +2,14 @@ var app = angular.module('todoApp',[]);
 app.controller('todoCtrl',function($scope,$http){
     $scope.endPoint="http://mean.codingcamp.us/todo/amitc";
     $scope.response=""; 
-    $scope.itemList=[];
+    $scope.itemList={itemInfo:[]};
     $scope.strikeList = [];
     
     $scope.add = function(){
      
-        if($scope.itemList.indexOf($scope.todoItem)==-1){
-            $scope.itemList.push($scope.todoItem); 
-            $scope.postList($scope.todoItem);             
+        if($scope.itemList.itemInfo.indexOf($scope.todoItem)==-1){
+            $scope.itemList.itemInfo.push({item:$scope.todoItem,price:$scope.todoItemPrice,imgUrl:$scope.todoItemImage}); 
+            $scope.postList($scope.itemList.itemInfo);             
         }
         
     }
@@ -26,13 +26,13 @@ app.controller('todoCtrl',function($scope,$http){
     }
  
     
-    $scope.postList = function(item){
+    $scope.postList = function(itemInfo){
         newlistItem ={
-            title:item,
-            description: item+"--abc",
+            title:itemInfo[itemInfo.length-1].item,
+            description: itemInfo.item+"--abc",
             completed:true,
-            price:$scope.todoItemPrice,
-            imgUrl:$scope.todoItemImage
+            price:itemInfo[itemInfo.length-1].price,
+            imgUrl:itemInfo[itemInfo.length-1].imgUrl
         }
         
         $http.post($scope.endPoint,newlistItem).success(success).error(error);
@@ -56,7 +56,7 @@ app.controller('todoCtrl',function($scope,$http){
     
     
     var success = function(data){
-        $scope.listItems=$scope.itemList;
+        $scope.listItems=newlistItem.title;
         console.log(data);
     }
     
