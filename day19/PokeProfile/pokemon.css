@@ -1,0 +1,33 @@
+#pokemonImage{
+    background-color:white;
+    margin:10 10 10 10;
+    border-color:black;
+    border-style:solid;
+    border-width:2px
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto'), local('Roboto-Regular'), url(http://fonts.gstatic.com/s/roboto/v15/sTdaA6j0Psb920Vjv-mrzH-_kf6ByYO6CLYdB4HQE-Y.woff2)          
+  format('woff2');
+  unicode-range: U+0460-052F, U+20B4, U+2DE0-2DFF, U+A640-A69F;
+}
+
+#bottomcartoon{
+    align:left;
+    position:fixed;
+}
+
+body{
+    background: -webkit-linear-gradient(#FFAC01,#FED000) no-repeat fixed;
+    font-family: 'Roboto';
+}
+
+@media screen and (max-width: 480px) {
+    #bottomcartoon {
+        height:100px;
+        width:100px;
+        align:middle
+    }
+}

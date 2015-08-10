@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="cars.css">
+    </head>
+    <body ng-app='MyCars'>
+        <div class='container' ng-controller='carController'>
+            <div class='row'>
+                <div class='col-sm-12'>
+                    <div class='well formWell'>
+                        <h2 id='formTitle'>Upload your car:</h2>
+                        <input class='form-control' id='carName'  ng-model='userCar.name' type='text' placeholder='Model'>
+                        <input class='form-control' id='carImage' ng-model='userCar.url' type='text' placeholder='url'>
+                        <input class='form-control' id='userName' ng-model='userCar.user' type='text' placeholder='username'>
+                        <br/>
+                        <button class='btn btn-success' id='adBtn' ng-click='add()'>Add</button>
+                    </div>
+                </div>    
+            </div>
+            <div class='row'>
+                <div class='col-sm-6' ng-repeat='car in prepopList'>
+                    <div class='well' style='margin-left:5px'>
+                        <img id='prepop' class='grow' ng-src='{{car.url}}'>
+                    </div>
+                </div>
+                <div class='col-sm-6' ng-repeat='car in favList track by $index'>
+                    <div class='well' style='margin-left:5px'>
+                    <img id='fav' class='grow' ng-src='{{car.url}}'>
+                        <label id='favCarName'>{{car.name}}</label>
+                        <label id='favCarUser'>User: {{car.user}}</label>
+                        <button id='removeBtn' type="button" ng-click='remove($index)' class="btn btn-danger btn-sm">
+                            <span class="glyphicon glyphicon-remove"></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+                <div class='row'>
+                    <div class='col-sm-12'>
+                        <div class='well formWell'>
+                            <h2 id='formTitle'>Upload your video:</h2>
+                            <input class='form-control' id='carVideoName'  ng-model='userVideo.name' type='text' placeholder='model'>
+                            <input class='form-control' id='carVideo' ng-model='userVideo.url' type='text' placeholder='url'>
+                            <input class='form-control' id='id' ng-model='userVideo.user' type='text' placeholder='username'>
+                            <br/>
+                            <button class='btn btn-success' id='adVideoBtn' ng-click='addVideo()'>Add Video</button>
+                        </div>
+                    </div>
+                </div>
+                <div class='col-sm-6' ng-repeat='car in favVideoList track by $index'>
+                    <div class='well' style='margin-left:5px'>
+                    <youtube-video video-url="car.url" class='grow' style='height:300px, width:450px'></youtube-video>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
+        <script src='carController.js'></script>
+        <script src="https://www.youtube.com/iframe_api"></script>
+        <script src="angular-youtube-embed.js"></script>
+<!--
+        <script src='modelservice.js'></script>
+        <script src='modelmanager.js'></script>
+-->
+    </body>
+</html>

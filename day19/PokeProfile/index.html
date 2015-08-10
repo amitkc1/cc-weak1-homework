@@ -3,19 +3,32 @@
     <head>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="pokemon.css">
     </head>
     <body ng-app='pokemonApp'>
-        <div class='container' ng-controller='pokemonController' style='background:-webkit-linear-gradient(#FFAC01,#FED000)'>
+        <div class='container' ng-controller='pokemonController'>
             <div class='row'>
                 <div class='col-md-4 col-md-offset-4'>
+                    <img style='margin-top:20px'src='pokemonHeader.jpg'>
                     <h2>Enter pokemon number</h2>
-                        <input class='form-control' ng-model='pokemonNumber' placeholder="pokemonNumber">
-                        <button ng-click='getPokemon()'>Get Pokemon</button>
-                        <h2>{{pokemonName}}</h2>
+                        <input class='form-control' ng-model='pokemonNumber' placeholder="pokemonNumber">    
                     <br/>
-                    <h2>{{pokemonAttack}}</h2>
+                    <button class='btn btn-info' style='width:100%'ng-click='getPokemon()'>Get Pokemon</button>
+                 <div class='row'>
+                    <div class='col-xs-6 col-xs-offset-3'>
+                        <h2 style='color:white;font-size:150%'>{{pokemonName}}</h2>
+                        <br/>
+                        <h2 style='font-size:150%'>{{pokemonAttack}}</h2>
+                        <br/>
+                        <h2 style='font-size:150%'>{{pokemonAbility}}</h2>
+                        <br/>
+                    <img id='pokemonImage' ng-src='{{pokemonImage}}' style=''>
+                    </div>
                 </div>
-       </div>
+               </div>
+            </div>
+        </div>
+        
          <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
         <script src="pokeprofile.js"></script>
     </body>
