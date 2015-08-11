@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<head>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="main.css">
+</head>
+<body ng-app='myFavState'>
+    <a href="/#/home">Home</a>
+    <span>|</span>
+    <a href="/#/about">About</a>
+    <span>|</span>
+    <a href="/#/whyilove">why I love</a>
+    <ng-view></ng-view>
+    <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js'></script>
+    <script src='https://code.angularjs.org/1.4.3/angular-route.min.js'></script>
+    <script src='main.js'></script>
+    <script src='about.js'></script>
+    <script src='whyILove.js'></script>
+    <script src='home.js'></script>
+</body>
