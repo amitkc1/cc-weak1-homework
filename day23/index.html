@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+    </head>
+    <body ng-app='omdb'>
+        <div class='container' ng-controller='omdbController'>
+            <h1>Open movie database...!</h1>
+            <div class='row jumbotron'>
+                <div class='col-sm-8 col-sm-offset-2'>
+                    <h3>By Title</h3>
+                    <hr>
+                    <label>Title</label>
+                    <input style='width=20%;display:inline-block' class='form-control' ng-model='title' placeholder="Enter Title">
+                    <label style='margin-top:10px' >Year</label>
+                    <input style='width=20%;display:inline-block' class='form-control' ng-model='year' placeholder="Enter Year">
+                    <button style='margin-top:10px' class='btn btn-info' ng-click='getDetailsByTitle()'>Search</button>
+                </div>    
+            </div>
+            <div class='row jumbotron' ng-show='responseByTitle!=null'>
+                <div class='col-sm-6 col-sm-offset-3'>
+                <p>Response</p>
+                <p>Title: {{responseByTitle.data.Title}}</p>
+                <p>Year: {{responseByTitle.data.Year}}</p>
+                <p>Released: {{responseByTitle.data.Released}}</p>
+                <p>Actors: {{responseByTitle.data.Actors}}</p>
+                <p>Imdb Rating: {{responseByTitle.data.imdbRating}}</p>
+            </div>
+            </div>
+                <div class='row jumbotron'>
+                <div class='col-sm-8 col-sm-offset-2'>
+                    <h3>By ID</h3>
+                    <hr>
+                    <label>IMDB ID</label>
+                    <input style='width=20%;display: inline-block' class='form-control' ng-model='id' placeholder="Enter Id">
+                    <label style='margin-top:10px'>Year</label>
+                    <input style='width=20%;display: inline-block' class='form-control' ng-model='year' placeholder="Enter Year">
+                    <br/>
+                    <button style='margin-top:10px' class='btn btn-info' ng-click='getDetailsById()'>Search</button>
+                </div>    
+            </div>
+            <div class='row alert alert-warning' ng-show='responseById!=null'>
+                <div class='col-sm-6 col-sm-offset-3'>
+                <p>Title: {{responseById.data.Title}}</p>
+                <p>Year: {{responseById.data.Year}}</p>
+                <p>Released: {{responseById.data.Released}}</p>
+                <p>Actors: {{responseById.data.Actors}}</p>
+                <p>Imdb Rating: {{responseById.data.imdbRating}}</p>
+            </div>
+            </div>
+        <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js'></script>
+        <script src='omdb.js'></script>
+    </body>
+</html>
