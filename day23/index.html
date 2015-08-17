@@ -18,7 +18,10 @@
                     <button style='margin-top:10px' class='btn btn-info' ng-click='getDetailsByTitle()'>Search</button>
                 </div>    
             </div>
-            <div class='row jumbotron' ng-show='responseByTitle!=null'>
+            <div class='row jumbotron' style='background:#3C9B5F' ng-show='responseByTitle!=null'>
+                <div class='col-sm-2'>
+            <img style='margin-left:0px; display:inline-block; width:150px; height:230px' ng-src='{{responseByTitle.data.Poster}}' ng-show='responseByTitle.data.Poster!=null'>
+                </div>
                 <div class='col-sm-6 col-sm-offset-3'>
                 <p>Response</p>
                 <p>Title: {{responseByTitle.data.Title}}</p>

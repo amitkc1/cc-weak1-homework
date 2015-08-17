@@ -27,47 +27,6 @@ app.controller('carController',function(carService,managerService,$scope){
 
 });
 
-
-app.service('carService',function(){
-
-     var car = function(carName,imgUrl,user){
-        this.name= carName;
-        this.url= imgUrl;
-        if(user){
-            this.user=user;
-        }
-    }
-    
-    var fav = function(carName,imgUrl,user){
-        this.name = carName;
-        this.url = imgUrl;
-        this.user = user;
-    }
-    
-    var favCarVideos = function(carName,videoUrl,user){
-        this.name = carName;
-        this.url = videoUrl;
-        this.user=user;
-    }
-    
-    
-    var bugatti = new car('Bugatti',"http://www.androidguys.com/wp-content/uploads/2015/07/2011939.jpg");
-    
-    var lotus = new car('Lotus',"http://3.bp.blogspot.com/-ArxBsJByCfI/U-lK5fmoiCI/AAAAAAAACGM/7O2MQ0NhQG0/s1600/fancy+car+pictures+26.jpg");
-    
-    var maserati = new car('Maserati',"http://2.bp.blogspot.com/-T-P_Sp5EdNQ/U-lLAPTDMDI/AAAAAAAACGo/fxIdByao1Ko/s1600/fancy+car+pictures+29.jpg");
-    
-    
-    var favCar1 = new fav("Mustang Shelby",'http://static7.bornrichimages.com/cdn2/683/384/91/c/wp-content/uploads/s3/1/2013/03/02/1362217109.jpg','abc123');
-    
-    var favCar2 = new fav("Techart GT Street",'http://static4.bornrichimages.com/cdn2/683/384/91/c/wp-content/uploads/s3/1/2013/03/01/1362121242.jpg','def456');
-    
-    var dragRacing = new favCarVideos('NFS most wanted','https://www.youtube.com/watch?v=L3ZguNkBbao','NFS');
-    this.favCarVideoList = [dragRacing];
-    this.favList = [favCar1,favCar2];
-    this.prepopList = [bugatti,lotus,maserati];
-});
-
 app.service('managerService',function(carService,$http){
     var endPoint = "http://mean.codingcamp.us/pony/amitkc1";
     
@@ -186,3 +145,50 @@ app.service('managerService',function(carService,$http){
     
     
 });
+
+app.service('carService',function(){
+
+     var car = function(carName,imgUrl,user){
+        this.name= carName;
+        this.url= imgUrl;
+        if(user){
+            this.user=user;
+        }
+    }
+    
+    var fav = function(carName,imgUrl,user){
+        this.name = carName;
+        this.url = imgUrl;
+        this.user = user;
+    }
+    
+    var favCarVideos = function(carName,videoUrl,user){
+        this.name = carName;
+        this.url = videoUrl;
+        this.user=user;
+    }
+    
+    
+    var bugatti = new car('Bugatti',"http://www.androidguys.com/wp-content/uploads/2015/07/2011939.jpg");
+    
+    var lotus = new car('Lotus',"http://3.bp.blogspot.com/-ArxBsJByCfI/U-lK5fmoiCI/AAAAAAAACGM/7O2MQ0NhQG0/s1600/fancy+car+pictures+26.jpg");
+    
+    var maserati = new car('Maserati',"http://2.bp.blogspot.com/-T-P_Sp5EdNQ/U-lLAPTDMDI/AAAAAAAACGo/fxIdByao1Ko/s1600/fancy+car+pictures+29.jpg");
+    
+    
+    var favCar1 = new fav("Mustang Shelby",'http://static7.bornrichimages.com/cdn2/683/384/91/c/wp-content/uploads/s3/1/2013/03/02/1362217109.jpg','abc123');
+    
+    var favCar2 = new fav("Techart GT Street",'http://static4.bornrichimages.com/cdn2/683/384/91/c/wp-content/uploads/s3/1/2013/03/01/1362121242.jpg','def456');
+    
+    var dragRacing = new favCarVideos('NFS most wanted','https://www.youtube.com/watch?v=L3ZguNkBbao','NFS');
+    this.favCarVideoList = [dragRacing];
+    this.favList = [favCar1,favCar2];
+    this.prepopList = [bugatti,lotus,maserati];
+});
+
+
+
+
+
+
+

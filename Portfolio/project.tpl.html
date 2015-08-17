@@ -1,0 +1,14 @@
+
+<div class='container' id='projectListing'>
+    <div class='row'>
+        <div class='col-sm-6' ng-repeat='image in images' id='projectImageColumn'>
+            <div class='well'>
+                <a href=''>
+                    <img ng-src="{{image.image}}" id='projectImage' class='grow'>
+                     <label id='imageLabel'>{{image.label}}</label>
+                </a>
+               
+            </div>
+        </div>
+    </div>
+</div>
