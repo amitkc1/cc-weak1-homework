@@ -8,7 +8,6 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 </head>
 <body ng-app='portfolio'>
-<div>
 <div class='navbar navbar-inverse'>
     <div class='container'>
         <a href='/#/about' class='navbar-brand'>About Me</a>
@@ -34,69 +33,8 @@
             </ul>
         </div>
     </div>
-     
-    </div>
-<div class='container'>
-    <div class='row'>
-        <div class='textBody' style='margin-top:40px'>
-            <div class='row'>
-                <div class='content'>  
-                    <div class='visible'>
-                        <p style='position:absolute;
-                                left:-30px;
-                                line-height:40px;
-                                color:#16a085'>{</p>
-                        <p id='homePara'>      Hello,   </p>    
-                        <ul id='homeUL'>      
-                            <li class='homeList'>world !</li>      
-                            <li class='homeList'>users !</li>
-                            <li class='homeList'>Amit !</li>
-                        </ul>    
-                    </div>
-                      <p style='position:absolute;
-                                    right:-30px;
-                                  margin-left:10px;
-                                   line-height:40px;
-                                   color:#16a085'>}</p>
-               </div>
-            </div>    
-       </div>
-    </div>
 </div>
-    <div class='row'>
-        <div class='col-sm-4 col-sm-offset-4'>
-        <p>
-        <a href="#">
-          <span class="glyphicon glyphicon-chevron-down"></span>
-        </a>
-    </p>
-    </div>
-    </div>
-    <div class='container' id='aboutMe'>
-        <div class='row'>
-            <div class='col-sm-2'>
-                <img src='about.png' style='width:200px;height:200px;margin-top:10px;margin-bottom:10px'>
-            </div>
-            <div class='col-sm-6 col-sm-offset-1'>    
-                <p class='aboutText'>
-                    I am Amit Chaudhari, a QA automation engineer and a programmer. I love testing applications using various 
-                    tools. I have also developed a few 
-                    applications using JS/AngularJS and they are posted on my github link mentioned on this website.
-                </p>
-                <p class='aboutText'>
-                    I have 3.5 years of experience in testing web and mobile applications and I am proficient in Selenium 
-                    Webdriver, Appium, unit testing tools such as Junit, TestNG and behavior driven tools like Specflow and 
-                    Cucumber. I am well versed with Javascript and latest frameworks based on it. Here is my <a 
-                    href='https://www.linkedin.com/in/amitkc1'>LinkedIn</a> profile.
-                </p>
-            <div>
-            <button class='btn btn-info'><a target="_self" href="Amit_Chaudhari_Resume-2.pdf" download='Amit_Chaudhari_Resume-2.pdf' style="color:white">Download Resume
-            </button>
-        </div>
-    </div>
-</div>
-</div>
-    </div>
+    <ng-view></ng-view>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js'></script>
 <script src='https://code.angularjs.org/1.4.3/angular-route.min.js'></script>
