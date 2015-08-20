@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    </head>
+    <body ng-app="main" >
+
+        <div ng-controller="presidentsCtrl">
+            <print-name names="presidents"></print-name>
+            <print-items items="cars"></print-items>
+        </div>
+
+        <div style="height:100px;width:100%;background-color:blue"></div>
+
+        <div ng-controller="heroesCtrl">
+            <print-name names="heroes"></print-name>
+            <div style="height:100px;width:100%;background-color:grey"></div>
+            <print-items items="actionFigures"></print-items>
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js"></script>
+        <script src="main.js"></script>
+    </body>
+</html>
