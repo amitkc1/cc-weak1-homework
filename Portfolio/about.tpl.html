@@ -1,26 +1,39 @@
-<div class='container' id='aboutMe'>
-<div class='row'>
-    <div class='col-sm-2'>
-        <img src='about.png' style='width:200px;height:200px;margin-top:10px;margin-bottom:10px'>
-    </div>
-    <div class='col-sm-6 col-sm-offset-1'>
-                
+<div class='container top300'>
+    <div class='jumbotron' id='abooutJumbotron'>
+        <div class='row'>
+            <div class='col-sm-2'>
+                <img src='about.png' style='width:200px;height:200px;margin-top:10px;margin-bottom:10px'>
+            </div>
+        <div class='col-sm-8 col-sm-offset-1'>        
                 <p class='aboutText'>
-                    I am Amit Chaudhari, a QA automation engineer and a programmer. I love testing applications using various tools. I have 
-                    also developed a few 
-                    applications using JS/AngularJS and they are posted on my github link mentioned on this website.
+                    I am Amit Chaudhari, a QA automation engineer and a programmer. I love testing applications using various   
+                    tools. I have also developed a few applications using JS/AngularJS and they are posted on my github link 
+                    mentioned on this website.
                 </p>
                 <p class='aboutText'>
-                    I have 3.5 years of experience in testing web and mobile applications and I am proficient in Selenium Webdriver, Appium,                     unit testing tools such as Junit, TestNG and behavior driven tools like Specflow and Cucumber. I am well versed with 
-                    Javascript and latest frameworks based on it. Here is my <a href='https://www.linkedin.com/in/amitkc1'>LinkedIn</a> 
+                    I have 3.5 years of experience in testing web and mobile applications and I am proficient in Selenium 
+                    Webdriver, Appium, unit testing tools such as Junit, TestNG and behavior driven tools like Specflow and 
+                    Cucumber. I am well versed with Javascript and latest frameworks based on it. Here is my <a 
+                    href='https://www.linkedin.com/in/amitkc1'>LinkedIn</a> 
                     profile.
                 </p>
-
-            <div>
-            <button class='btn btn-info'><a target="_self" href="Amit_Chaudhari_Resume-2.pdf" download='Amit_Chaudhari_Resume-2.pdf'          
-                    style="color:white">Download Resume
-            </button>
+            <div>    
+                <button class='btn btn-info' style='margin-left:auto;margin-right:auto;display:block'><a target="_self" href="Amit_Chaudhari_Resume-2.pdf" download='Amit_Chaudhari_Resume-
+                    2.pdf' style="color:white">Download Resume
+                </button>
+            </div>
+        </div>
+</div>
+</div>
+</div>
+<div class='container top50'>
+    <div class='row' ng-app='portfolio.about' ng-controller='aboutCtrl'>
+        <div class='col-sm-6 col-sm-offset-3'>
+            <p style='text-align:center'>
+                <a ng-click='goToProjects()'>
+                    <span class="glyphicon glyphicon-chevron-down"></span>
+                </a>
+            </p>
         </div>
     </div>
-</div>
 </div>

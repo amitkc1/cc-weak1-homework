@@ -8,5 +8,7 @@ app.config(function($routeProvider){
 });
 
 app.controller('aboutCtrl',function($scope){
-
+    var divPosition=$('#projectListing').offset(); 
+    console.log(divPosition);
+    $('html, body').animate({scrollTop: divPosition.top}, "slow");
 });
