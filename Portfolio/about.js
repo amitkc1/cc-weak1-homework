@@ -1,4 +1,4 @@
-var app=angular.module('portfolio.about',['ngRoute']);
+var app=angular.module('portfolio.about',['ngRoute','portfolio.project']);
 app.config(function($routeProvider){
     $routeProvider.when('/about',{
         controller: 'aboutCtrl',
@@ -8,7 +8,8 @@ app.config(function($routeProvider){
 });
 
 app.controller('aboutCtrl',function($scope){
-    var divPosition=$('#projectListing').offset(); 
-    console.log(divPosition);
-    $('html, body').animate({scrollTop: divPosition.top}, "slow");
+    $scope.goToProjects = function(){
+         var divPosition = $('#projectListing').offset();
+        $('html, body').animate({scrollTop: divPosition.top}, "slow");
+    }
 });

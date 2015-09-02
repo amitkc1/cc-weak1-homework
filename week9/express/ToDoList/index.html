@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+    </head>
+    <body ng-app='todoApp'>
+        <div class='container' ng-controller='todoCtrl'>
+            <div class='row' style='margin-bottom:10px'>
+                <div class='col-md-6 col-md-offset-3'>
+                </div>
+            </div>
+            <div class='row' style='margin-bottom:10px'>
+              <div class='col-md-6'>
+                <div class='well'>
+                    <h2>To Do List</h2>
+                    <input ng-model='todoItem' class='form-control' placeholder="add todo">
+                    <input ng-model='todoItemPrice' class='form-control' placeholder="add item price (optional)" style='margin-top:5px'>
+                    <input ng-model='todoItemImage' class='form-control' placeholder="add item imageUrl (optional)" style='margin-top:5px'>
+                    <br/>
+                     <button ng-click='add()'>Add</button>
+                  </div>
+                </div>
+                <div class='col-md-6'>
+                    <div class='well'>
+                        <h2>Already Done</h2>
+                        <ul>
+                            <li ng-repeat='strikeItem in strikeList'>
+                            <strike>{{strikeItem}}</strike>
+                            </li>
+                        </ul>   
+                    </div>
+                </div>
+        </div>
+            <div class='row'>
+                <div class='col-md-6'>
+                <div clsass='well'>
+                    <ul id="sortable" class="list-unstyled">
+                        <li ng-repeat='item in listItems track by $index' class="ui-state-default">
+                            <label style='margin-top:5px'><input type="checkbox" value="" ng-click='check($index)'/> {{item}} 
+<!--
+                                <label>
+                                    ${{price}}
+                                </label>
+-->
+                            </label>
+                            
+                        <button class='btn btn-default btn-xs pull-right  remove-item' ng-click='remove($index)'>
+                            <span class='glyphicon glyphicon-remove'>Remove</span>    
+                        </button>
+                        <button type="button" class="btn btn-default btn-xs pull-right" style='margin-right:5px'>
+                                <span class="glyphicon glyphicon-edit">Edit</span>
+                        </button>
+                        </li>
+                    </ul>
+                    <label style='background-color:#F4FCE8'>{{itemList.length}} items left</label>   
+                    
+                </div>
+            </div>    
+        </div>
+            <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
+        <script src='todolist.js'></script>
+    </body>
+    
+</html>

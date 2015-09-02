@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body ng-app='filterApp'>
+        <div ng-controller='filterController'>
+        <input id='filterBox' placeholder="Enter your text" ng-model='inputBox' ng-keyup='filterArray()'>
+            <div>
+                <label ng-repeat = 'element in text track by $index'>{{element}}</label>
+            </div>
+        </div>
+        <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js'></script>
+        <script src='main.js'></script>
+    </body>
+</html>
