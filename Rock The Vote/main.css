@@ -1,0 +1,8 @@
+#issueColumn{
+    background-color: darkseagreen;
+    padding-top: 20px;
+}
+
+#voteSection{
+    display: inline-block;
+}

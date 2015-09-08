@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="main.css">
+    </head>
+    <body ng-app='rockthevote' ng-controller='rockthevoteController'>
+        <div class="row">
+            <div class='col-md-6 col-md-offset-3 jumbotron'>
+                <label>Username: </label>
+                <input placeholder="Enter your username">
+                <button ng-click='getIssues()'>Submit</button>
+            </div>
+        </div>
+        <div class='container'>
+            <div class='row'>
+                <div id='issueColumn' class='col-md-12 jumbotron' ng-repeat='issue in issues track by $index'>
+                    <label>Title: {{issue.title}}</label>
+                    <label>Description: {{issue.description}}</label>
+                    <br/>
+                    <label>User: {{issue.user}}</label>
+                    <br/>
+                    <label>Votes: {{issue.votes}}</label>
+                    <br/>
+                    <div id='voteSection'>
+                        <button id='upvote' ng-click='upvote($index)'>UpVote</button>   
+                        <button id='downvote' ng-click='downvote($index)'>DownVote</button>
+                        <button id='comment'>Comment</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+        <script src="rockthevote.js"></script>
+    </body>
+</html>
