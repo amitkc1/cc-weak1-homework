@@ -1,0 +1,27 @@
+#weatherModule{
+    margin-top: 30px
+}
+
+#alertSuccess{
+    margin-top: 10px;
+    padding-top: 10px
+}
+
+#searchLabel{
+    display: inline-block;
+    text-align: center;
+}
+
+#weatherLogo{
+    max-height: 100px;
+    max-width: 100px
+}
+
+#mainHeader{
+    margin-left: 20px;
+    display: inline-block;
+}
+
+#navList{
+    color:white;
+}

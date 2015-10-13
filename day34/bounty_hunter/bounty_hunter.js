@@ -1,5 +1,8 @@
 var express = require('express');
 var app =  express();
+var mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost/bountyhunter');  
+var bounty = require('./module.js').bounty;
 var uuid = require('node-uuid');
 var bodyParser= require('body-parser');
 app.use(bodyParser.urlencoded({extended:false}));
@@ -26,14 +29,41 @@ app.get("/bounty",function(req,res){
 })
 
 app.get("/",function(req,res){
-    res.send("<h1>Bounties:</h1>"+"<ul>"+"<li style='color:red'>"+bountyList[0].firstName+"</li>"+}+"</ul>")
+    res.send("<h1>Bounties:</h1>"+"<ul>"+"<li style='color:red'>"+bountyList[0].firstName+"</li></ul>")
+})
+
+app.get("/bounty/:firstName",function(req,res){
+    bounty.find({firstName:req.params.firstName},function(err,data){
+        if(err){
+            res.status(403).send("Error occurred. ");
+        }
+        
+        if(req.params.firstName===""){
+            res.status(200).send("No bounty hunter found");
+        }
+        
+        res.status(200).send(data);
+    })
 })
 
 app.post("/bounty",function(req,res){
-    req.body.id=uuid.v1();
-    bountyList.push(req.body);
-    res.send(bountyList);
+    console.log(req.body);
+    var bountyList = new bounty(req.body);
+    bountyList.save(function(err,data){
+        if(err){
+            res.status(403).send("err")
+        }
+        res.status(200).send(data);
+    
+    })
 })
+
+
+//app.post("/bounty",function(req,res){
+//    req.body.id=uuid.v1();
+//    bountyList.push(req.body);
+//    res.send(bountyList);
+//})
 
 app.put('/bounty/:id',function(req,res){
     for(var bountyNumber=0;bountNumber<bountyList.length;bountyNumber++){

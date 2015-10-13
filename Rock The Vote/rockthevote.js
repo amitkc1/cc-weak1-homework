@@ -1,25 +1,25 @@
 var app =angular.module('rockthevote',[]);
 app.controller('rockthevoteController',function($scope,rockthevoteService){
-    $scope.votes=0;
+$scope.votes=0;
     $scope.getIssues = function(){
             rockthevoteService.getData().then(function(data){
                 $scope.issues = data.data;
-                console.log($scope.issues);
+                console.log($scope.issues[0].votes);
             })
     }
     
     $scope.upvote = function(index){
         rockthevoteService.upvote($scope.issues[index].id,$scope.issues[index].votes,$scope.issues[index].title,$scope.issues[index].description).then(function(data){
-            $scope.votes = $scope.issues[index].votes;
-            console.log($scope.votes);
+            $scope.issues[index].votes = JSON.stringify(data.data[index].votes);
+            console.log($scope.issues[index].votes);
         })
     }
     
     $scope.downvote = function(index){
 rockthevoteService.downvote($scope.issues[index].id,$scope.issues[index].votes,$scope.issues[index].title,$scope.issues[index].description).then(function(data){
-        $scope.votes = $scope.issues[index].votes
-        console.log($scope.votes);
-})
+        $scope.issues[index].votes = JSON.stringify(data.data[index].votes);
+        console.log($scope.issues[index].votes);
+    })
     }
 })
 
@@ -31,7 +31,7 @@ app.service('rockthevoteService',function($http,$q){
         console.log("Endpoint is: "+this.endpoint)
         var deferred= $q.defer();
         $http.get(this.endpoint).then(function(response){
-            console.log(JSON.stringify(response.data));
+            console.log(JSON.stringify(response));
             deferred.resolve(response);
         },function(error){
             deferred.reject(error);
@@ -52,7 +52,6 @@ app.service('rockthevoteService',function($http,$q){
         },function(error){
             deferred.reject(error);
         })
-        
         return deferred.promise;
     }
     

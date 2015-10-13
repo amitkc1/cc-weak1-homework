@@ -1,15 +1,21 @@
 var express = require('express');
 var cors = require('cors');
+var morgan = require('morgan');
 var uuid = require('node-uuid');
 var app =express();
+var mongoose = require('mongoose');
+var jwt = require('jsonwebtoken');
+mongoose.connect("mongodb://localhost/userdb");
+var user = require("./user.js");
+var config = require("./config.js");
 var bodyParser= require('body-parser');
+app.set(config.database);
 app.use(cors());
 app.use(bodyParser.urlencoded({extended:false}));
 app.use(bodyParser.json());
 
-var tokenId=[{
-    
-}]
+var users=["amitkc","jacob"];
+
 
 
 var politicalIssues=[{
@@ -27,13 +33,18 @@ var politicalIssues=[{
     "id":"67890"
 }]
 
-//app.all('/votelist', function(req, res, next) {
-//  res.header("Access-Control-Allow-Origin", "*");
-//  res.header("Access-Control-Allow-Headers", "X-Requested-With");
-//  next();
-// });
+
+app.use(function(req,res,next) {
+
+    if (users[req.headers.username] || req.baseUrl == "/register") {
+        next();
+    } else {
+        res.status(403).send("This user is not authorized");
+    }
+});
 
 app.get("/votelist",function(req,resp){
+    console.log(politicalIssues);
     resp.send(politicalIssues);
 })
 
@@ -78,4 +89,5 @@ app.delete("/votelist",function(req,resp){
     resp.send(politicalIssues);
 })
 
-app.listen(8080);
+var port = process.env.PORT || 8080; 
+app.listen(port);

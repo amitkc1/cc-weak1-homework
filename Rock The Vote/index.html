@@ -7,9 +7,10 @@
     </head>
     <body ng-app='rockthevote' ng-controller='rockthevoteController'>
         <div class="row">
+            <h1><img src='proxy_form.png'></h1>
             <div class='col-md-6 col-md-offset-3 jumbotron'>
                 <label>Username: </label>
-                <input placeholder="Enter your username">
+                <input placeholder="Enter your username" ng-model='username'>
                 <button ng-click='getIssues()'>Submit</button>
             </div>
         </div>
@@ -24,8 +25,9 @@
                     <label>Votes: {{issue.votes}}</label>
                     <br/>
                     <div id='voteSection'>
-                        <button id='upvote' ng-click='upvote($index)'>UpVote</button>   
-                        <button id='downvote' ng-click='downvote($index)'>DownVote</button>
+                        <button id='upvote' ng-click='upvote($index)'><a href='#'><span class="glyphicon glyphicon-thumbs-up"></span></a></button>  
+                        <button ng-hide='issue.votes<=0' id='downvote' ng-click='downvote($index)'><a href="#">
+                        <span class="glyphicon glyphicon-thumbs-down"></span></a></button>
                         <button id='comment'>Comment</button>
                     </div>
                 </div>

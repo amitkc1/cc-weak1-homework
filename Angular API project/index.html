@@ -5,29 +5,30 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
         <link rel="stylesheet" href="weather.css">
     </head>
-    <body>
-        <div class='row' ng-app='weather' ng-controller='weatherCtrl'>
-            <div class='col-sm-8 col-sm-offset-2'>
-              <div class='jumbotron'>
-                <label>By city name:</label>
-                <input id='city' placeholder='city name' ng-model='cityName'>
-                  <button class='btn btn-info' ng-click='getWeather(cityName)'>Get Weather..!</button>
-                  <div class='alert alert-success' style='margin-top:10px'>
-                      <label>{{weather.$$state.value.name}}</label>
-                      <br/>
-                      <img ng-src="http://openweathermap.org/img/w/{{weather.$$state.value.weather[0].icon}}.png">
-                      {{weather.$$state.value.weather[0].description}}
-                      <br/>
-                      <label>Clouds:{{weather.$$state.value.clouds.all}}%</label>
-                      <br/>
-                      <span class='label label-warning'>{{minTemp}}</span>
-                      <span class='label label-default'>{{maxTemp}}</span>
-                  </div>
-              </div>
+    <body ng-app='weather'>
+        <div class='row'>
+            <div class='col-sm-6 col-sm-offset-3'>
+                <img src='weather-logo.png' id='weatherLogo'>
+                <h1 id='mainHeader'>The Open Weather Channel</h1>
             </div>
         </div>
+        <nav class='navbar navbar-inverse'>
+            <div class='container'>
+              <ul class="nav navbar-nav" id='navList'>
+                <li><a href='/#/home'>Home</a></li>
+                <li><a href='/#/weatherLayer'>Weather and Map</a></li>
+                <li><a href='/#/maps'>Interactive Map</a></li>
+              </ul>
+        </nav>
+        <ng-view></ng-view>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+        <script src='https://code.angularjs.org/1.4.3/angular-route.min.js'></script>
         <script src="weather.js"></script>
-    </body>
+        <script src="home.js"></script>
+        <script src="Maps.js"></script>
+        <script src="weatherLayer.js"></script>
+        <script src="http://openlayers.org/api/OpenLayers.js"></script>
+        <script src="http://openweathermap.org/js/OWM.OpenLayers.1.3.4.js"></script>
+        </body>
 </html>

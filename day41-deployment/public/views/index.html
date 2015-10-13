@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+    <body ng-app='main' ng-controller='mainCtrl'>
+        <div ng-init="setProductionUrl('<%= prod %>')"></div>
+        <ng-view></ng-view> 
+        <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js'></script>
+        <script src="/js/angular-route.min.js"></script>
+        <script src="/js/main.js"></script>
+        <script src="/views/home/home.js"></script>
+    </body>
+</html>

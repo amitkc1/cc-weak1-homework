@@ -1,0 +1,40 @@
+        <div class='row' id='weatherModule'>
+            <div class='col-sm-4 col-sm-offset-1'>
+              <div class='jumbotron' id='bycityname'>
+                <label id='searchLabel' style='margin-left:20px'>Search by city name:</label>
+                <br/>
+                <input id='city' placeholder='city name' ng-model='cityName' style='margin-left:20px'>
+                  <button class='btn btn-info' ng-click='getWeather(cityName)'>Get Weather..!</button>
+              </div>
+              <div class='alert alert-success' id='sucessAlert' ng-show='minTemp!=0'>
+                      <label>{{weather.$$state.value.name}}</label>
+                      <br/>
+                      <img ng-src="http://openweathermap.org/img/w/{{weather.$$state.value.weather[0].icon}}.png">
+                      {{weather.$$state.value.weather[0].description}}
+                      <br/>
+                      <label>Clouds:{{weather.$$state.value.clouds.all}}%</label>
+                      <br/>
+                      <span class='label label-warning'>{{minTemp.$$state.value}}</span>
+                      <span class='label label-default'>{{maxTemp.$$state.value}}</span>
+               </div>
+            </div>
+            <div class='col-sm-4 col-sm-offset-1.4'>
+              <div class='jumbotron' id='byzipcode'>
+                <label id='searchLabel' style='margin-left:20px'>Search by zip code:</label>
+                <br/>
+                <input id='zip' placeholder='Zip Code' ng-model='zipCode' style='margin-left:20px'>
+                  <button class='btn btn-info' ng-click='getWeatherByZipCode(zipCode)'>Get Weather..!</button>
+              </div>
+              <div class='alert alert-success' id='sucessAlert' ng-show='minTempZipCode!=0'>
+                      <label>{{weatherByZip.$$state.value.name}}</label>
+                      <br/>
+                      <img ng-src="http://openweathermap.org/img/w/{{weatherByZip.$$state.value.weather[0].icon}}.png">
+                      {{weatherByZip.$$state.value.weather[0].description}}
+                      <br/>
+                      <label>Clouds:{{weatherByZip.$$state.value.clouds.all}}%</label>
+                      <br/>
+                      <span class='label label-warning'>{{minTempZipCode.$$state.value}}</span>
+                      <span class='label label-default'>{{maxTempZipCode.$$state.value}}</span>
+               </div>
+            </div>
+        </div>
